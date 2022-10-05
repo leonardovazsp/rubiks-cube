@@ -48,6 +48,11 @@ class Cube:
         np.save('state.npy', self.state)
         self.history = np.array([])
         np.save('history.npy', self.history)
+
+    def scramble(self, n):
+        # Scramble the cube
+        for i in range(n):
+            self.moves[random.randint(0, 11)]()
     
     def top(self):
         # Rotate the top face clockwise
