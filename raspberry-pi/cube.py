@@ -49,6 +49,10 @@ class Cube:
         self.history = np.array([])
         np.save('history.npy', self.history)
 
+    def get_cube_state(self):
+        # Get the cube state
+        return self.state
+
     def scramble(self, n):
         # Scramble the cube
         for i in range(n):

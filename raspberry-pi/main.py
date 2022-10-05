@@ -13,3 +13,71 @@ The API provides the following endpoints:
 The API is implemented using Flask.
 '''
 
+from flask import Flask, jsonify, request
+import numpy as np
+import os
+import random
+import time
+from picamera import PiCamera
+from picamera.array import PiRGBArray
+
+# Load config
+with open('config.json') as f:
+    config = json.load(f)
+
+# Initialize camera
+resolution = config['camera']['resolution']
+camera = PiCamera()
+camera.resolution = resolution
+rawCapture = PiRGBArray(camera, size=resolution)
+
+# Allow the camera to warmup
+time.sleep(0.1)
+
+# Define the type of server
+server_type = config['server_type']
+if server_type == 'master':
+    # Master server is responsible for rotating the cube as well as getting the images from the camera
+    from cube import Cube
+    cube = Cube()
+    camera_server_url = config['camera_server_url']
+    master = True
+elif server_type == 'camera':
+    # Camera server is responsible for getting the images from the camera
+    master = False
+
+app = Flask(__name__)
+
+@app.route('/')
+def receive_request():
+    # Receive a request from the client with the move to be made on the cube as post data
+    # Rotate the cube according to the move
+    # Get image from the local camera and from the camera server
+    # Get the cube state
+    # Return images and cube state as json
+    if master:
+        move = request.data.decode('utf-8')
+        if move == 'reset':
+            cube.reset()
+        elif move in cube.moves_list:
+            move = getattr(cube, move)()
+            move
+        else:
+            cube.random_move()
+        cube_state = cube.get_cube_state()
+        # Get image from the local camera
+        camera.capture(rawCapture, format='bgr')
+        image = rawCapture.array
+        rawCapture.truncate(0)
+        # Get image from the camera server
+        r = requests.get(camera_server_url)
+        image_server = r.json()['image']
+        # Return images and cube state as json
+        return jsonify({'image': image.tolist(), 'image_server': image_server, 'cube_state': cube_state.tolist()})
+    else:
+        # Get image from the local camera
+        camera.capture(rawCapture, format='bgr')
+        image = rawCapture.array
+        rawCapture.truncate(0)
+        # Return image as json
+        return jsonify({'image': image.tolist()})
