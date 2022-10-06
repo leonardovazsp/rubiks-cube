@@ -52,7 +52,6 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST'])
 def receive_request():
-    print('Hi')
     # Receive a request from the client with the move to be made on the cube as post data
     # Rotate the cube according to the move
     # Get image from the local camera and from the camera server
@@ -60,7 +59,6 @@ def receive_request():
     # Return images and cube state as json
     if master:
         move = request.data.decode('utf-8')
-        print(move)
         if move == 'reset':
             cube.reset()
         elif move in cube.moves_list:
