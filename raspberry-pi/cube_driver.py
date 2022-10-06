@@ -38,7 +38,6 @@ def rotate(pin, steps=50):
         time.sleep(WAIT_TIME)
 
 def top():
-    print('top')
     GPIO.output(pins['direction'], True)
     rotate(pins['top'])
 

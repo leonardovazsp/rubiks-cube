@@ -48,7 +48,7 @@ class Cube:
                 move = move + '_rev'
             self.moves[self.moves_list.index(move)]()
         self.state = np.arange(54) // 9
-        self.state = state.reshape(6, 3, 3)
+        self.state = self.state.reshape(6, 3, 3)
         np.save('state.npy', self.state)
         self.history = np.array([])
         np.save('history.npy', self.history)
@@ -210,5 +210,12 @@ class Cube:
 if __name__ == '__main__':
     cube = Cube()
     cube.top()
+    cube.left()
+    cube.right()
+    cube.bottom()
+    cube.back()
+    import time
+    time.sleep(3)
+    cube.reset()
     print(cube.state)
 
