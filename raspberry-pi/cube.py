@@ -8,6 +8,9 @@ import cube_driver as cd
 import numpy as np
 import os
 import random
+import json
+import copy
+import inspect
 
 class Cube:
     def __init__(self):
@@ -34,6 +37,7 @@ class Cube:
         else:
             history = np.array([])
             np.save('history.npy', history)
+        return list(history)
 
     def reset(self):
         # Reset the cube

@@ -8,6 +8,7 @@ The pins configuration is stored in the config.json file.
 
 import time
 import RPi.GPIO as GPIO
+import json
 
 WAIT_TIME = 0.001
 
@@ -24,7 +25,7 @@ with open('config.json') as f:
 pins = config['pins']
 
 # Set the GPIO pins
-for pin in pins:
+for pin in pins.values():
     GPIO.setup(pin, GPIO.OUT)
     GPIO.output(pin, False)
 
