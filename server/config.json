@@ -1,4 +1,4 @@
-{"data_dir": "/data",
-"api_url": "192.168.1.112:8080",
+{"data_dir": "data",
+"api_url": "192.168.1.103:8000",
 "splits_ratio": {"train": 0.8, "test": 0.1, "val": 0.1}
 }
