@@ -20,6 +20,7 @@ import random
 import time
 from picamera import PiCamera
 from picamera.array import PiRGBArray
+import json
 
 # Load config
 with open('config.json') as f:
@@ -81,3 +82,6 @@ def receive_request():
         rawCapture.truncate(0)
         # Return image as json
         return jsonify({'image': image.tolist()})
+
+if __name__ == '__main__':
+    app.run(host='localhost', port=8000)

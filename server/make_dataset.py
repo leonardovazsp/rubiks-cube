@@ -26,12 +26,12 @@ if not os.path.exists(config['data_dir']):
     os.makedirs(config['data_dir'])
 
 # Create the train, test and val directories
-for split in config['splits']:
+for split in config['splits_ratio'].keys():
     if not os.path.exists(os.path.join(config['data_dir'], split)):
         os.makedirs(os.path.join(config['data_dir'], split))
 
 # Create the images and labels directories
-for split in config['splits']:
+for split in config['splits_ratio'].keys():
     if not os.path.exists(os.path.join(config['data_dir'], split, 'images')):
         os.makedirs(os.path.join(config['data_dir'], split, 'images'))
     if not os.path.exists(os.path.join(config['data_dir'], split, 'labels')):
@@ -44,7 +44,7 @@ class DatasetGenerator:
         self.url = config['api_url']
         self.data_dir = config['data_dir']
         self.splits_ratio = config['splits_ratio']
-        self.splits = sum([[split] * int(ratio * 100) for split, ratio in splits_ratio.items()], [])
+        self.splits = sum([[split] * int(ratio * 100) for split, ratio in self.splits_ratio.items()], [])
         self.moves_list = ['right', 'left', 'top', 'bottom', 'front', 'back']
     
     def send_request(self, filename=None, move=None):
@@ -55,7 +55,7 @@ class DatasetGenerator:
         # If move is not None, rotate the cube according to the move
         if move is None:
             move = random.choice(self.moves_list)
-        r = requests.post(self.post_url, data=move)
+        r = requests.post(self.url, data=move)
         if filename is not None:
             filename = os.path.join(self.data_dir, filename)
             cube_state_1 = r.json()['cube_state_1']
@@ -76,30 +76,7 @@ class DatasetGenerator:
             filename = os.path.join(split, 'images', str(base_count))
             self.send_request(filename=filename)
 
-
-
-
-
-splits_ratio = {'train': 0.8, 'test': 0.1, 'val': 0.1}
-splits = [s for s in [[split] * ratio * 100 for split, ratio in splits_ratio.items()]]
-
-
-# Create the dataset
-for split in config['splits']:
-    print(f'Creating {split} dataset...')
-    for i in tqdm(range(config['num_samples'])):
-        # Get the image and label
-        response = requests.get(config['api_url'])
-        data = response.json()
-        image = data['image']
-        label = data['label']
-
-        # Save the image
-        image_name = f'{i}.jpg'
-        image_path = os.path.join(config['data_dir'], split, 'images', image_name)
-        urllib.request.urlretrieve(image, image_path)
-
-        # Save the label
-        label_name = f'{i}.npy'
-        label_path = os.path.join(config['data_dir'], split, 'labels', label_name)
-        np.save(label_path, label)
+if __name__ == '__main__':
+    # Create the dataset
+    dataset_generator = DatasetGenerator()
+    dataset_generator.generate_dataset(num_images=3)

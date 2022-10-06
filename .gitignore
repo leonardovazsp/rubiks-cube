@@ -1,2 +1,3 @@
 server/data/**
 raspberry-pi/*.npy
+raspberry-pi/__pycache__
