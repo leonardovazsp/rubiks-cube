@@ -16,6 +16,8 @@ import requests
 import urllib.request
 from PIL import Image
 from tqdm import tqdm
+import pickle
+import copy
 
 # Load config
 with open('config.json') as f:
@@ -46,6 +48,15 @@ class DatasetGenerator:
         self.splits_ratio = config['splits_ratio']
         self.splits = sum([[split] * int(ratio * 100) for split, ratio in self.splits_ratio.items()], [])
         self.moves_list = ['right', 'left', 'top', 'bottom', 'front', 'back']
+
+    def process_label(self, label):
+        label_1 = label[[0, 1, 4]]
+        label_2 = label[[2, 3, 5]]
+        label_2_ = copy.deepcopy(label_2)
+        label_2[0] = np.rot90(label_2_[1], 2)
+        label_2[1] = np.rot90(label_2_[0], 2)
+        label_2[2] = np.rot90(label_2_[2], 1)
+        return label_1, label_2
     
     def send_request(self, filename=None, move=None):
         # Send a request to the API to rotate the cube and get the image and label
@@ -58,25 +69,23 @@ class DatasetGenerator:
         r = requests.post(self.url, data=move)
         if filename is not None:
             filename = os.path.join(self.data_dir, filename)
-            cube_state_1 = r.json()['cube_state_1']
-            cube_state_2 = r.json()['cube_state_2']
-            image_1 = r.json()['image_1']
-            image_2 = r.json()['image_2']
-            urllib.request.urlretrieve(image_1, filename + '_1.jpg')
-            urllib.request.urlretrieve(image_2, filename + '_2.jpg')
-            np.save(filename.replace('images', 'labels') + '_1.npy', cube_state_1)
-            np.save(filename.replace('images', 'labels') + '_2.npy', cube_state_2)
+            img_1, img_2, label = pickle.loads(r.content)
+            label_1, label_2 = self.process_label(label)
+            np.save(filename + '_1.npy', img_1)
+            np.save(filename + '_2.npy', img_2)
+            np.save(filename.replace('images', 'labels') + '_1.npy', label_1)
+            np.save(filename.replace('images', 'labels') + '_2.npy', label_2)
 
     def generate_dataset(self, num_images=100, reset=True):
         # Generate the dataset
         # If reset is True, send a final request to the API to reset the cube
         for i in tqdm(range(num_images)):
             split = random.choice(self.splits)
-            base_count = len(os.listdir(os.path.join(self.data_dir, split, 'images')))
+            base_count = len(os.listdir(os.path.join(self.data_dir, split, 'images')))//2
             filename = os.path.join(split, 'images', str(base_count))
             self.send_request(filename=filename)
 
 if __name__ == '__main__':
     # Create the dataset
     dataset_generator = DatasetGenerator()
-    dataset_generator.generate_dataset(num_images=3)
+    dataset_generator.generate_dataset(num_images=4)
