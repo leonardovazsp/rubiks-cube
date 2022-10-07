@@ -50,7 +50,7 @@ class Cube:
         self.state = np.arange(54) // 9
         self.state = self.state.reshape(6, 3, 3)
         np.save('state.npy', self.state)
-        self.history = np.array([])
+        self.history = list(np.array([]))
         np.save('history.npy', self.history)
 
     def get_cube_state(self):
