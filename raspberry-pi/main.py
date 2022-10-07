@@ -22,6 +22,7 @@ from picamera import PiCamera
 from picamera.array import PiRGBArray
 import json
 import requests
+import pickle
 
 # Load config
 with open('config.json') as f:
@@ -72,17 +73,20 @@ def receive_request():
         image = rawCapture.array
         rawCapture.truncate(0)
         # Get image from the camera server
-        r = requests.get(camera_server_url)
-        image_server = r.json()['image']
-        # Return images and cube state as json
-        return jsonify({'image': image.tolist(), 'image_server': image_server, 'cube_state': cube_state.tolist()})
+        r = requests.post(camera_server_url, data='get_img')
+        image_server = pickle.loads(r.content)
+        response = pickle.dumps([image, image_server, cube_state])
+        return response
     else:
         # Get image from the local camera
+        data = request.data.decode('utf-8')
+        if not data == 'get_img':
+            return None
         camera.capture(rawCapture, format='bgr')
         image = rawCapture.array
         rawCapture.truncate(0)
-        # Return image as json
-        return jsonify({'image': image.tolist()})
+        # Return data as pickle
+        return pickle.dumps(image)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
