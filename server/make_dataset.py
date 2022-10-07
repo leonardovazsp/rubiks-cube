@@ -39,7 +39,7 @@ for split in config['splits_ratio'].keys():
     if not os.path.exists(os.path.join(config['data_dir'], split, 'labels')):
         os.makedirs(os.path.join(config['data_dir'], split, 'labels'))
 
-class DatasetGenerator:
+class SampleGenerator:
     # Class to retrieve the images and labels from the API
     # Send a request to the API to rotate the cube and get the image and label
     def __init__(self):
@@ -76,6 +76,12 @@ class DatasetGenerator:
             np.save(filename.replace('images', 'labels') + '_1.npy', label_1)
             np.save(filename.replace('images', 'labels') + '_2.npy', label_2)
 
+    def get_imgs(self):
+        # Get only the images from the API
+        r = requests.post(self.url, data='get_imgs')
+        img_1, img_2, _ = pickle.loads(r.content)
+        return img_1, img_2
+
     def generate_dataset(self, num_images=100, reset=True):
         # Generate the dataset
         # If reset is True, send a final request to the API to reset the cube
@@ -87,5 +93,5 @@ class DatasetGenerator:
 
 if __name__ == '__main__':
     # Create the dataset
-    dataset_generator = DatasetGenerator()
+    dataset_generator = SampleGenerator()
     dataset_generator.generate_dataset(num_images=4)
