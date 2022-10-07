@@ -65,7 +65,7 @@ def receive_request():
         elif move in cube.moves_list:
             move = getattr(cube, move)()
             move
-        else:
+        elif move == 'random':
             cube.random_move()
         cube_state = cube.get_cube_state()
         # Get image from the local camera
