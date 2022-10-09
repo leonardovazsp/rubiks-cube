@@ -1,9 +1,8 @@
 import torch
 from model import RubiksCubeModel
-from make_dataset import SampleGenerator, Dataset
+from data_pipeline import SampleGenerator, Dataset
 from torch.utils.data import DataLoader
 from torch.optim.lr_scheduler import ExponentialLR
-
 
 class DeviceDataLoader():
     def __init__(self, dl, device):
@@ -82,8 +81,8 @@ if __name__ == '__main__':
     device = get_default_device()
     data_dir = config['data_dir']
 
-    train_ds = Dataset(resolution, data_dir, 'train')
-    val_ds = Dataset(resolution, data_dir, 'val')
+    train_ds = Dataset(resolution, data_dir, 'train', background_augmentation=0.5)
+    val_ds = Dataset(resolution, data_dir, 'val', background_augmentation=0.5)
     train_loader, val_loader = get_data_loaders(train_ds, val_ds, batch_size)
 
     model = get_model()

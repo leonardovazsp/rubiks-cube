@@ -2,7 +2,7 @@ import torch
 from torch.nn import Module, Linear, ReLU, Sequential, Conv2d, MaxPool2d, Flatten, Dropout, functional as F
 from torch.optim import Adam
 from torch.utils.data import DataLoader
-from make_dataset import Dataset
+from data_pipeline import Dataset
 from torch.optim.lr_scheduler import ExponentialLR
 
 class RubiksCubeModel(Module):

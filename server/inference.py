@@ -1,5 +1,5 @@
 from model import RubiksCubeModel
-from make_dataset import SampleGenerator
+from data_pipeline import SampleGenerator
 import json
 
 config = json.load(open('config.json'))

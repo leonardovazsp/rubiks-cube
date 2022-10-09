@@ -1,6 +1,6 @@
 import torch
 from model import RubiksCubeModel
-from make_dataset import SampleGenerator, Dataset
+from data_pipeline import SampleGenerator, Dataset
 from torch.utils.data import DataLoader
 from torch.optim.lr_scheduler import ExponentialLR
 
