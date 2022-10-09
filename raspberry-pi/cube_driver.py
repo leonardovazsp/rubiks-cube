@@ -10,7 +10,7 @@ import time
 import RPi.GPIO as GPIO
 import json
 
-WAIT_TIME = 0.001
+WAIT_TIME = 0.0012
 
 # Set the GPIO mode
 GPIO.setmode(GPIO.BCM)
