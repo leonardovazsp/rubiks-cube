@@ -19,6 +19,7 @@ from tqdm import tqdm
 import pickle
 import copy
 import torch
+import argparse
 
 # Load config
 with open('config.json') as f:
@@ -137,5 +138,8 @@ class Dataset:
         return image, label
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--num-images', type=int, default=0, help='Number of training images')
+    args = parser.parse_args()
     dataset_generator = SampleGenerator()
-    dataset_generator.generate_dataset(num_images=4)
+    dataset_generator.generate_dataset(num_images=args.num_images)
