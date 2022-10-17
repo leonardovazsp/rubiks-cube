@@ -125,8 +125,8 @@ class RubiksCubeModel(Module):
         loss_1 = F.cross_entropy(out1, labels[0])
         loss_2 = F.cross_entropy(out2, labels[1])
         loss_3 = F.cross_entropy(out, labels[2])
-        # loss = torch.mean(torch.stack((loss_1, loss_2, loss_3)))
-        loss = loss_1 * self.acc_gap[0] + loss_2 * self.acc_gap[1] + loss_3 * self.acc_gap[2]
+        loss = torch.mean(torch.stack((loss_1, loss_2, loss_3)))
+        # loss = loss_1 * self.acc_gap[0] + loss_2 * self.acc_gap[1] + loss_3 * self.acc_gap[2]
         _, preds_1 = torch.max(out1, dim=-1)
         _, labels_1 = torch.max(labels[0], dim=-1)
         _, preds_2 = torch.max(out2, dim=-1)
@@ -154,8 +154,8 @@ class RubiksCubeModel(Module):
         acc_1 = torch.tensor(torch.sum(preds_1==labels_1).item() / (len(preds_1)*27))
         acc_2 = torch.tensor(torch.sum(preds_2==labels_2).item() / (len(preds_1)*27))
         acc = torch.tensor(torch.sum(preds==labels_).item() / (len(preds)*54))
-        with torch.no_grad():
-            self.acc_gap = 1 - torch.softmax(torch.stack((acc_1, acc_2, acc)), dim=-1)
+        # with torch.no_grad():
+        #     self.acc_gap = 1 - torch.tensor([acc_1, acc_2, acc])
         return {'val_loss': loss, 'val_acc': acc, 'val_acc_1': acc_1, 'val_acc_2': acc_2}
 
     def epoch_end(self, epoch, result):
