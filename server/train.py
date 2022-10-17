@@ -33,8 +33,8 @@ def get_model():
     return model
 
 def get_data_loaders(train_ds, val_ds, batch_size):
-    train_loader = DeviceDataLoader(DataLoader(train_ds, batch_size, shuffle=True, num_workers=28, pin_memory=True), device)
-    val_loader = DeviceDataLoader(DataLoader(val_ds, batch_size, num_workers=28, pin_memory=True), device)
+    train_loader = DeviceDataLoader(DataLoader(train_ds, batch_size, shuffle=True, num_workers=12, pin_memory=True), device)
+    val_loader = DeviceDataLoader(DataLoader(val_ds, batch_size, num_workers=12, pin_memory=True), device)
     return train_loader, val_loader
 
 def evaluate(model, val_loader):
@@ -60,6 +60,8 @@ def fit(epochs, lr, model, train_loader, val_loader, opt_func=torch.optim.SGD, g
         result = evaluate(model, val_loader)
         result['train_loss'] = torch.stack([x.get('loss') for x in train_results]).mean().item()
         result['train_acc'] = torch.stack([x.get('acc') for x in train_results]).mean().item()
+        result['acc_1'] = torch.stack([x.get('acc_1') for x in train_results]).mean().item()
+        result['acc_2'] = torch.stack([x.get('acc_2') for x in train_results]).mean().item()
         model.epoch_end(epoch, result)
         history.append(result)
 
@@ -74,6 +76,7 @@ if __name__ == '__main__':
     epochs = config['train']['epochs']
     gamma = config['train']['learning_rate_decay']
     lr = config['train']['learning_rate']
+    lr = 0.05
     optimizer = torch.optim.SGD if 'optimizer' not in config or config['train']['optimizer'] == 'SGD' else torch.optim.Adam
     input_shape = config['train']['input_shape']
     resolution = input_shape[1:]

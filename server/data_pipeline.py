@@ -98,7 +98,9 @@ class Dataset:
         self.data_dir = data_dir
         self.split = split
         self.images = os.listdir(os.path.join(self.data_dir, self.split, 'images'))
+        self.images = self.images[::2]
         self.labels = os.listdir(os.path.join(self.data_dir, self.split, 'labels'))
+        self.labels = self.labels[::2]
         self.mask1 = np.array(Image.open(os.path.join(self.data_dir, 'mask1.png'))).max(axis=-1, keepdims=True)/255
         self.mask2 = np.array(Image.open(os.path.join(self.data_dir, 'mask2.png'))).max(axis=-1, keepdims=True)/255
         self.backgrounds = os.listdir(os.path.join(self.data_dir, 'backgrounds'))
@@ -112,7 +114,7 @@ class Dataset:
             background = random.choice(self.backgrounds)
             background = Image.open(os.path.join(self.data_dir, 'backgrounds', background))
             background = background.rotate(random.randint(0, 360), expand=True)
-            background = background.transpose(Image.FLIP_LEFT_RIGHT) if np.random.random() < 0.5 else background
+            # background = background.transpose(Image.FLIP_LEFT_RIGHT) if np.random.random() < 0.5 else background
             background = background.resize(image.shape[:2][::-1])
             background = np.array(background) / 255.
             image = image/255.
@@ -127,15 +129,34 @@ class Dataset:
         return image.transpose(2, 0, 1)
 
     def __getitem__(self, idx):
-        image = np.load(os.path.join(self.data_dir, self.split, 'images', self.images[idx]))
-        mask = self.mask1 if self.images[idx][-5] == 1 else self.mask2
-        image = self.augment(image, mask)
-        label = np.load(os.path.join(self.data_dir, self.split, 'labels', self.labels[idx]))
-        label = label.reshape(-1)
-        label = np.eye(6)[label]
-        image = torch.from_numpy(image).float()
+        img_name = os.path.join(self.data_dir, self.split, 'images', self.images[idx][:-6])
+        lbl_name = os.path.join(self.data_dir, self.split, 'labels', self.labels[idx][:-6])
+        img_1 = self.augment(np.load(img_name + '_1.npy'), self.mask1)
+        img_2 = self.augment(np.load(img_name + '_2.npy'), self.mask2)
+        label_1 = np.load(lbl_name + '_1.npy')
+        label_2 = np.load(lbl_name + '_2.npy')
+        label = self.join_labels(label_1, label_2).astype(np.int32)
+        label = np.eye(6)[label.reshape(-1)]
+        label_1 = np.eye(6)[label_1.reshape(-1)]
+        label_2 = np.eye(6)[label_2.reshape(-1)]
+        img_1 = torch.from_numpy(img_1).float()
+        img_2 = torch.from_numpy(img_2).float()
+        label_1 = torch.from_numpy(label_1).float()
+        label_2 = torch.from_numpy(label_2).float()
         label = torch.from_numpy(label).float()
-        return image, label
+        return [img_1, img_2], [label_1, label_2, label]
+
+    def join_labels(self, label_1, label_2):
+        # Join two labels together (inverse of pre_process_label function)
+        label_2_ = copy.deepcopy(label_2)
+        label_2 = copy.deepcopy(label_2)
+        label_2[0] = np.rot90(label_2_[1], 2)
+        label_2[1] = np.rot90(label_2_[0], 2)
+        label_2[2] = np.rot90(label_2_[2], -1)
+        label = np.zeros(shape=(6, 3, 3))
+        label[[0, 1, 4]] = label_1
+        label[[2, 3, 5]] = label_2
+        return label
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
