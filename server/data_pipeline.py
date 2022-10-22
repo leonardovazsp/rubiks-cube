@@ -140,6 +140,10 @@ class Dataset:
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--num-images', type=int, default=0, help='Number of training images')
+    parser.add_argument('--move', type=str, default=None, help='Move the cube')
     args = parser.parse_args()
     dataset_generator = SampleGenerator()
-    dataset_generator.generate_dataset(num_images=args.num_images)
+    if args.move is not None:
+        dataset_generator.send_request(move=args.move)
+    elif args.num_images > 0:
+        dataset_generator.generate_dataset(num_images=args.num_images)
