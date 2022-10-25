@@ -4,9 +4,9 @@ When an engineer gets bored, he/she builds a Rubiks Cube robot. This is a simple
 
 ## Hardware
 
-![Hardware](assets/rubiks.png)
-
 The robot is built using 2x Raspberry Pi 3, 2x Pi Camera, a 3D printed structure, 6x stepper motors, and a bunch of wires. The robot is controlled by a Python program running on the Raspberry Pi. The camera is used to detect the cube, and the stepper motors are used to rotate the cube. The neural network is implemented using PyTorch.
+
+![Hardware](assets/rubiks.png)
 
 ## Software
 
