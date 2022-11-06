@@ -1,6 +1,6 @@
 # Rubiks Cube Robot Solver
 
-When an engineer gets bored, he/she builds a Rubiks Cube robot. This is a simple robot that solves a Rubiks Cube. It uses 2x cameras to capture the entirety of the cube at once, and then uses a neural network to determine the cube's state. The solving algorithm is a deep reinforcement learning algorithm that learns to solve the cube by trial and error (just for the fun of it).
+This is a simple robot that solves a Rubiks Cube. It uses 2x cameras to capture the entirety of the cube at once, and then uses a neural network to determine the cube's state. The solving algorithm is a deep reinforcement learning algorithm that learns to solve the cube by trial and error.
 
 ## Hardware
 
