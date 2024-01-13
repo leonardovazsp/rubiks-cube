@@ -26,18 +26,17 @@ void setup() {
   digitalWrite(xDir, LOW);
   digitalWrite(yDir, LOW);
   digitalWrite(zDir, LOW);
-
-  delay(5);
 }
 
 void loop() {
   if (stringComplete) {
     if (inputString == "get_device") {
-      Serial.println("1");
+      Serial.println("0");
       inputString = "";
       }
     else {
       executeCommand(inputString);
+      Serial.println(inputString + ":ACK");
       inputString = "";
       stringComplete = false;
     }
@@ -47,14 +46,13 @@ void loop() {
 void serialEvent() {
   while (Serial.available()) {
     char inChar = (char)Serial.read();
-    if (inChar == '\n') {  // Change '\n' to your chosen delimiter
+    if (inChar == '\n') {
       stringComplete = true;
     }
     else {inputString += inChar;}
   }
 }
 void executeCommand(String command) {
-    Serial.println("Command received: " + command); 
     if (command == "zcw") rotateMotor(zStep, zDir, true);
     else if (command == "zccw") rotateMotor(zStep, zDir, false);
     else if (command == "ycw") rotateMotor(yStep, yDir, true);
