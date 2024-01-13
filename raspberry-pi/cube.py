@@ -4,21 +4,23 @@ It also provides a virtual cube to keep track of the cube state.
 The state is stored in a file called `state.npy`.
 '''
 
-import cube_driver as cd
 import numpy as np
 import os
 import random
 import json
 import copy
 import inspect
+from driver import Driver, COMMANDS
+
 
 class Cube:
     def __init__(self):
         # Load the cube state and history (create a new files if not found)
         self.state = self.load_state()
         self.history = self.load_history()
-        self.moves_list = ['right', 'right_rev', 'left', 'left_rev', 'top', 'top_rev', 'bottom', 'bottom_rev', 'front', 'front_rev', 'back', 'back_rev']
-        self.moves = [self.right, self.right_rev, self.left, self.left_rev, self.top, self.top_rev, self.bottom, self.bottom_rev, self.front, self.front_rev, self.back, self.back_rev]
+        self.moves_list = list(COMMANDS.keys())
+        self.driver = Driver()
+        # self.moves = [self.right, self.right_rev, self.left, self.left_rev, self.top, self.top_rev, self.bottom, self.bottom_rev, self.front, self.front_rev, self.back, self.back_rev]
 
     def load_state(self):
         # Load the cube state
@@ -46,7 +48,9 @@ class Cube:
                 move = move[:-4]
             else:
                 move = move + '_rev'
-            self.moves[self.moves_list.index(move)]()
+            assert move in self.moves_list, f"move must belong to the set of moves {self.moves_list}"
+            getattr(self, move)()
+
         self.state = np.arange(54) // 9
         self.state = self.state.reshape(6, 3, 3)
         np.save('state.npy', self.state)
@@ -64,7 +68,7 @@ class Cube:
     
     def top(self):
         # Rotate the top face clockwise
-        cd.top()
+        self.driver.move_cube('top')
         temp_state = copy.deepcopy(self.state)
         self.state[0, 0] = temp_state[1, 0]
         self.state[1, 0] = temp_state[2, 0]
@@ -76,7 +80,7 @@ class Cube:
 
     def top_rev(self):
         # Rotate the top face counter-clockwise
-        cd.top_rev()
+        self.driver.move_cube('top_rev')
         temp_state = copy.deepcopy(self.state)
         self.state[0, 0] = temp_state[3, 0]
         self.state[1, 0] = temp_state[0, 0]
@@ -88,7 +92,7 @@ class Cube:
 
     def right(self):
         # Rotate the right face clockwise
-        cd.right()
+        self.driver.move_cube('right')
         temp_state = copy.deepcopy(self.state)
         self.state[0, :, 2] = temp_state[5, :, 2]
         self.state[4, :, 2] = temp_state[0, :, 2]
@@ -100,7 +104,7 @@ class Cube:
 
     def right_rev(self):
         # Rotate the right face counter-clockwise
-        cd.right_rev()
+        self.driver.move_cube('right_rev')
         temp_state = copy.deepcopy(self.state)
         self.state[0, :, 2] = temp_state[4, :, 2]
         self.state[4, :, 2] = np.flip(temp_state[2, :, 0], 0)
@@ -112,7 +116,7 @@ class Cube:
     
     def left(self):
         # Rotate the left face clockwise
-        cd.left()
+        self.driver.move_cube('left')
         temp_state = copy.deepcopy(self.state)
         self.state[0, :, 0] = temp_state[4, :, 0]
         self.state[4, :, 0] = np.flip(temp_state[2, :, 2], 0)
@@ -125,7 +129,7 @@ class Cube:
 
     def left_rev(self):
         # Rotate the left face counter-clockwise
-        cd.left_rev()
+        self.driver.move_cube('left_rev')
         temp_state = copy.deepcopy(self.state)
         self.state[0, :, 0] = temp_state[5, :, 0]
         self.state[4, :, 0] = temp_state[0, :, 0]
@@ -137,7 +141,7 @@ class Cube:
 
     def bottom(self):
         # Rotate the bottom face clockwise
-        cd.bottom()
+        self.driver.move_cube('bottom')
         temp_state = copy.deepcopy(self.state)
         self.state[0, 2] = temp_state[3, 2]
         self.state[3, 2] = temp_state[2, 2]
@@ -149,7 +153,7 @@ class Cube:
 
     def bottom_rev(self):
         # Rotate the bottom face counter-clockwise
-        cd.bottom_rev()
+        self.driver.move_cube('bottom_rev')
         temp_state = copy.deepcopy(self.state)
         self.state[0, 2] = temp_state[1, 2]
         self.state[3, 2] = temp_state[0, 2]
@@ -161,7 +165,7 @@ class Cube:
 
     def back(self):
         # Rotate the back face clockwise
-        cd.back()
+        self.driver.move_cube('back')
         temp_state = copy.deepcopy(self.state)
         self.state[1, :, 2] = np.flip(temp_state[5, 2, :], 0)
         self.state[5, 2, :] = temp_state[3, :, 0]
@@ -173,7 +177,7 @@ class Cube:
 
     def back_rev(self):
         # Rotate the back face counter-clockwise
-        cd.back_rev()
+        self.driver.move_cube('back_rev')
         temp_state = copy.deepcopy(self.state)
         self.state[1, :, 2] = temp_state[4, 0, :]
         self.state[5, 2, :] = np.flip(temp_state[1, :, 2], 0)
@@ -185,7 +189,7 @@ class Cube:
 
     def front(self):
         # Rotate the front face clockwise
-        cd.front()
+        self.driver.move_cube('front')
         temp_state = copy.deepcopy(self.state)
         self.state[1, :, 0] = temp_state[4, 2, :]
         self.state[4, 2, :] = np.flip(temp_state[3, :, 2], 0)
@@ -197,7 +201,7 @@ class Cube:
 
     def front_rev(self):
         # Rotate the front face counter-clockwise
-        cd.front_rev()
+        self.driver.move_cube('front_rev')
         temp_state = copy.deepcopy(self.state)
         self.state[1, :, 0] = np.flip(temp_state[5, 0, :], 0)
         self.state[4, 2, :] = temp_state[1, :, 0]
@@ -208,14 +212,17 @@ class Cube:
         np.save('history.npy', self.history)
 
 if __name__ == '__main__':
-    cube = Cube()
-    cube.top()
-    cube.left()
-    cube.right()
-    cube.bottom()
-    cube.back()
     import time
-    time.sleep(3)
-    cube.reset()
+    cube = Cube()
+    time.sleep(5)
+    for i in range(10):
+        cube.top()
+        # cube.front()
+        # cube.left()
+        # cube.right()
+        # cube.bottom()
+        # cube.back()
+        # cube.reset()
+        # time.sleep(1)
     print(cube.state)
 
