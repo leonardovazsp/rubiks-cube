@@ -22,7 +22,7 @@ SMALL_SLEEP_TIME = 0.5
 
 class Device():
     def __init__(self, port):
-        print('Initializing serial...')
+        print('Initializing serial...', end = ' ')
         self.serial = serial.Serial(f'/dev/{port}', 9600, timeout=1)
         print('Serial initialized.')
         time.sleep(SLEEP_TIME)
@@ -43,6 +43,7 @@ class Device():
                     print(f"Arduino response: {response}")
             if time.time() - start > timeout:
                 self.send_command(command)
+                break
         # time.sleep(SMALL_SLEEP_TIME)
 
     def read_line(self):
@@ -53,7 +54,7 @@ class Device():
         self.serial.write(('get_device' + '\n').encode())
         response = self.read_line()
         device_no = int(response)
-        print(f"Device {device_no} recognized for {self.serial}")
+        print(f"Device {device_no} recognized for port {self.serial.port}")
         return device_no
 
 class Driver():
