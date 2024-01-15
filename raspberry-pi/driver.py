@@ -18,7 +18,7 @@ COMMANDS = {
 
 PORTS = ['ttyUSB0', 'ttyUSB1']
 SLEEP_TIME = 2
-SMALL_SLEEP_TIME = 0.5
+SMALL_SLEEP_TIME = 0.01
 
 class Device():
     def __init__(self, port):
@@ -44,7 +44,7 @@ class Device():
             if time.time() - start > timeout:
                 self.send_command(command)
                 break
-        # time.sleep(SMALL_SLEEP_TIME)
+        time.sleep(SMALL_SLEEP_TIME)
 
     def read_line(self):
         return self.serial.readline().decode('utf-8').rstrip()
