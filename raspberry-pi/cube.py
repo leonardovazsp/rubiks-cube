@@ -64,7 +64,8 @@ class Cube:
     def scramble(self, n):
         # Scramble the cube
         for i in range(n):
-            self.moves[random.randint(0, 11)]()
+            move = random.choice(self.moves_list)
+            getattr(self, move)()
     
     def top(self):
         # Rotate the top face clockwise
@@ -217,12 +218,12 @@ if __name__ == '__main__':
     time.sleep(5)
     for i in range(10):
         cube.top()
-        # cube.front()
-        # cube.left()
-        # cube.right()
-        # cube.bottom()
-        # cube.back()
-        # cube.reset()
-        # time.sleep(1)
+        cube.front()
+        cube.left()
+        cube.right()
+        cube.bottom()
+        cube.back()
+        cube.reset()
+        time.sleep(1)
     print(cube.state)
 
