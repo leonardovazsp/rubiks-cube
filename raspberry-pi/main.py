@@ -34,9 +34,11 @@ def find_ip(server_type):
         try:
             r = requests.get('http://' + ip + ':8000/get_device/', timeout=0.1)
             if r.text == server_type:
+                print('Found ' + server_type + ' server at ' + ip)
                 return ip
         except:
             pass
+    raise Exception('Could not find ' + server_type + ' server')
     
 
 # Allow the camera to warmup
