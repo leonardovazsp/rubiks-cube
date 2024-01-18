@@ -50,7 +50,7 @@ if server_type == 'master':
     # Master server is responsible for rotating the cube as well as getting the images from the camera
     from cube import Cube
     cube = Cube()
-    camera_server_url = 'http://' + find_camera_ip() + ':8000/'
+    camera_server_url = 'http://' + find_ip('camera') + ':8000/'
     master = True
 
 app = Flask(__name__)
