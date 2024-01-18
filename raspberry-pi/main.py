@@ -18,10 +18,10 @@ with open('config.json') as f:
     config = json.load(f)
 
 # Initialize camera
-# resolution = config['camera']['resolution']
-# camera = PiCamera()
-# camera.resolution = resolution
-# rawCapture = PiRGBArray(camera, size=resolution)
+resolution = config['camera']['resolution']
+camera = PiCamera()
+camera.resolution = resolution
+rawCapture = PiRGBArray(camera, size=resolution)
 
 def find_ip(server_type):
     '''
@@ -32,7 +32,7 @@ def find_ip(server_type):
     for i in range(100, 256):
         ip = '192.168.1.' + str(i)
         try:
-            r = requests.get('http://' + ip + ':8000/get_device/', timeout=0.1)
+            r = requests.get('http://' + ip + ':8000/get_device/', timeout=0.2)
             if r.text == server_type:
                 print('Found ' + server_type + ' server at ' + ip)
                 return ip
@@ -40,7 +40,6 @@ def find_ip(server_type):
             pass
     raise Exception('Could not find ' + server_type + ' server')
     
-
 # Allow the camera to warmup
 time.sleep(0.1)
 
@@ -55,7 +54,42 @@ if server_type == 'master':
     camera_server_url = 'http://' + find_ip('camera') + ':8000/'
     master = True
 
+def get_imgs():
+    """
+    Get images from the local camera and from the remote camera.
+    Return images as pickle.
+    """
+    print("")
+    if master:
+        # Get image from the local camera
+        print("Getting image from local camera (server)")
+        camera.capture(rawCapture, format='bgr')
+        image = rawCapture.array
+        rawCapture.truncate(0)
+
+        # Get image from the camera server
+        print("Getting image from the camera server")
+        r = requests.get(camera_server_url + 'get_images/')
+        image_server = pickle.loads(r.content, encoding='bytes')
+        response = pickle.dumps([image, image_server])
+        return response
+
+    # Get image from the local camera (this will run only on the remote camera)
+    print("Getting image from local camera")
+    camera.capture(rawCapture, format='bgr')
+    image = rawCapture.array
+    rawCapture.truncate(0)
+    return pickle.dumps(image)
+
 app = Flask(__name__)
+
+@app.route('/get_cube_state/', methods=['GET'])
+def get_cube_state():
+    return jsonify(cube.get_cube_state())
+
+@app.route('/get_images/', methods=['GET'])
+def get_images():
+    return get_imgs()
 
 @app.route('/get_device/', methods=['GET'])
 def get_device():
@@ -85,26 +119,10 @@ def receive_request():
         # Define cube state
         cube_state = cube.get_cube_state()
 
-        # Get image from the local camera
-        camera.capture(rawCapture, format='bgr')
-        image = rawCapture.array
-        rawCapture.truncate(0)
-
-        # Get image from the camera server
-        r = requests.post(camera_server_url, data='get_img')
-        image_server = pickle.loads(r.content)
-        response = pickle.dumps([image, image_server, cube_state])
+        # Get images
+        images = pickle.loads(get_imgs())
+        response = pickle.dumps(images + [cube_state])
         return response
-
-    # Get image from the local camera (this will run only on the remote camera)
-    data = request.data.decode('utf-8')
-    if not data == 'get_img':
-        return None
-
-    camera.capture(rawCapture, format='bgr')
-    image = rawCapture.array
-    rawCapture.truncate(0)
-    return pickle.dumps(image)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
