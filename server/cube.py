@@ -16,10 +16,9 @@ def find_ip(server_type):
         try:
             print('Trying ' + ip)
             r = requests.get('http://' + ip + ':8000/get_device/', timeout=0.5)
-            print(r.text)
             if r.text == server_type:
                 print('Found ' + server_type + ' server at ' + ip)
-                return ip
+                return 'http://' + ip + ':8000'
         except:
             pass
     raise Exception('Could not find ' + server_type + ' server')
@@ -62,7 +61,7 @@ class RubiksCube:
         Get get the images and labels from the API without moving the cube
         """
 
-        r = requests.get('http://' + self.url + ':8000/get_images/')
+        r = requests.get(self.url + 'get_images/')
         img_1, img_2 = pickle.loads(r.content)
         return img_1[:, :, ::-1], img_2[:, :, ::-1]
     
@@ -70,6 +69,6 @@ class RubiksCube:
         """
         Get the state of the cube
         """
-        r = requests.get('http://' + self.url + ':8000/get_cube_state/')
+        r = requests.get(self.url + 'get_cube_state/')
         state = pickle.loads(r.content)
         return state
