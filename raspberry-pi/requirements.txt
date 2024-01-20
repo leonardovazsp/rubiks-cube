@@ -2,4 +2,3 @@ numpy
 Flask
 picamera
 requests
-pickle

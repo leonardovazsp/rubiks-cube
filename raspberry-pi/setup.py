@@ -1,6 +1,7 @@
 import os
 import subprocess
 import sys
+import argparse
 
 def create_virtualenv(path):
     """Create a virtual environment."""
@@ -25,7 +26,12 @@ def setup_systemd_service(service_name, service_template, service_path):
     subprocess.check_call(['sudo', 'systemctl', 'start', service_name])
     print("Systemd service set up and started.")
 
-def main():
+def set_environment_variables(variables):
+    with open("/etc/environment", 'a') as f:
+        for var in variables:
+            f.write(f'{var[0]}={var[1]}')
+
+def main(environment_variables):
     app_dir = os.path.dirname(os.path.realpath(__file__))
     venv_path = os.path.join(app_dir, 'venv')
     requirements_path = os.path.join(app_dir, 'requirements.txt')
@@ -49,6 +55,13 @@ WantedBy=multi-user.target
     create_virtualenv(venv_path)
     install_requirements(venv_path, requirements_path)
     setup_systemd_service(service_name, service_template, service_path)
+    set_environment_variables(environment_variables)
+
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--server-type', type=str, help='Define the type of server (master or camera)')
+    args = parser.parse_args()
+    assert args.server_type is not None, "Please define the type of server. For example, python3 setup.py --server-type camera"
+    environment_variables = [("SERVER_TYPE", args.server_type)]
+    main(environment_variables)

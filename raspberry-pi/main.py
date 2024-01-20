@@ -1,6 +1,7 @@
 '''
 API to interact with the Rubik's Cube and get images from the camera as well as the cube state.
 '''
+import os
 import time
 import json
 import requests
@@ -14,6 +15,7 @@ from flask import Flask, jsonify, request
 
 WEBHOOK_SECRET = b'leo123456'
 
+time.sleep(5)
 # Load config
 with open('config.json') as f:
     config = json.load(f)
@@ -45,7 +47,7 @@ def find_ip(server_type):
 time.sleep(0.1)
 
 # Define the type of server
-server_type = config['server_type']
+server_type = os.environ["SERVER_TYPE"]
 master = False
 moving = False
 
@@ -156,4 +158,4 @@ def is_valid_signature(payload, signature):
     return hmac.compare_digest(mac.hexdigest(), signature)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=False)
