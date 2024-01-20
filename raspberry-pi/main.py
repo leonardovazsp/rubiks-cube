@@ -46,6 +46,7 @@ time.sleep(0.1)
 # Define the type of server
 server_type = config['server_type']
 master = False
+moving = False
 
 if server_type == 'master':
     # Master server is responsible for rotating the cube as well as getting the images from the camera
@@ -58,6 +59,15 @@ app = Flask(__name__)
 
 @app.route('/get_cube_state/', methods=['GET'])
 def get_cube_state():
+    """
+    Get the state of the cube.
+    """
+
+    if moving:
+        return 400
+    
+    if master:
+        return jsonify(cube.get_cube_state())
     return jsonify(cube.get_cube_state())
 
 @app.route('/get_images/', methods=['GET'])
@@ -66,7 +76,10 @@ def get_images():
     Get images from the local camera and from the remote camera.
     Return images as pickle.
     """
-    print("")
+    
+    if moving:
+        return 400
+    
     if master:
         # Get image from the local camera
         print("Getting image from local camera (server)")
@@ -99,7 +112,9 @@ def move():
     cube according to the move.
 
     """
+    
     if master:
+        moving = True
         move = request.data.decode('utf-8')
         if move == 'reset':
             cube.reset()
@@ -111,6 +126,8 @@ def move():
         elif move == 'random':
             cube.random_move()
 
+        time.sleep(0.2)
+        moving = False
         return 200
 
 if __name__ == '__main__':
