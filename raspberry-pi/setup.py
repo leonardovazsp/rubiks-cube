@@ -26,14 +26,14 @@ def setup_systemd_service(service_name, service_template, service_path):
     print("Systemd service set up and started.")
 
 def main():
-    app_dir = '~/projects/rubiks-cube/raspberry-pi'
+    app_dir = os.path.dirname(os.path.realpath(__file__))
     venv_path = os.path.join(app_dir, 'venv')
     requirements_path = os.path.join(app_dir, 'requirements.txt')
     service_name = 'rubiks.service'
     service_path = '/etc/systemd/system/'
 
     service_template = f"""[Unit]
-Description=My Python Application
+Description=Rubiks Cube Controller API
 After=network.target
 
 [Service]
