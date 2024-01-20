@@ -1,17 +1,18 @@
 '''
 API to interact with the Rubik's Cube and get images from the camera as well as the cube state.
 '''
-
-from flask import Flask, jsonify, request
-import numpy as np
-import os
-import random
 import time
-from picamera import PiCamera
-from picamera.array import PiRGBArray
 import json
 import requests
 import pickle
+import hmac
+import hashlib
+import subprocess
+from picamera import PiCamera
+from picamera.array import PiRGBArray
+from flask import Flask, jsonify, request
+
+WEBHOOK_SECRET = b'leo123456'
 
 # Load config
 with open('config.json') as f:
@@ -76,7 +77,7 @@ def get_images():
     Get images from the local camera and from the remote camera.
     Return images as pickle.
     """
-    
+
     if moving:
         return 400
     
@@ -129,6 +130,30 @@ def move():
         time.sleep(0.2)
         moving = False
         return 200
+    
+@app.route('/update', methods=['POST'])
+def update():
+    """
+    Update the script when a new push is made to the repo.
+    """
+
+    payload = request.data
+    signature = request.headers.get('X-Hub-Signature')
+    if not is_valid_signature(payload, signature):
+        return 'Invalid signature', 400
+    
+    subprocess.Popen(['./update_script.sh'])
+    
+def is_valid_signature(payload, signature):
+    if not signature:
+        return False
+    
+    sha_name, signature = signature.split('=')
+    if sha_name != 'sha1':
+        return False
+    
+    mac = hmac.new(WEBHOOK_SECRET, msg=payload, digestmod=hashlib.sha1)
+    return hmac.compare_digest(mac.hexdigest(), signature)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
