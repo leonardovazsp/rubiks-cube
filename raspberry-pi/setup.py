@@ -27,9 +27,10 @@ def setup_systemd_service(service_name, service_template, service_path):
     print("Systemd service set up and started.")
 
 def set_environment_variables(variables):
-    with open("/etc/environment", 'a') as f:
-        for var in variables:
-            f.write(f'{var[0]}={var[1]}')
+    output = ""
+    for var in variables:
+        output += f'Environment="{var[0]}"="{var[1]}"\n'
+    return output
 
 def main(environment_variables):
     app_dir = os.path.dirname(os.path.realpath(__file__))
@@ -37,14 +38,17 @@ def main(environment_variables):
     requirements_path = os.path.join(app_dir, 'requirements.txt')
     service_name = 'rubiks.service'
     service_path = '/etc/systemd/system/'
+    environment_variables = set_environment_variables(environment_variables)
 
     service_template = f"""[Unit]
 Description=Rubiks Cube Controller API
 After=network.target
 
 [Service]
+{environment_variables}
 User=pi
 WorkingDirectory={app_dir}
+ExecStartPre=ngrok http --domain=servopi.ngrok.io 8000
 ExecStart={venv_path}/bin/python {app_dir}/main.py
 Restart=on-failure
 
@@ -55,7 +59,7 @@ WantedBy=multi-user.target
     create_virtualenv(venv_path)
     install_requirements(venv_path, requirements_path)
     setup_systemd_service(service_name, service_template, service_path)
-    set_environment_variables(environment_variables)
+    
 
 
 if __name__ == '__main__':
