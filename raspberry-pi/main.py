@@ -54,7 +54,14 @@ if server_type == 'master':
     camera_server_url = 'http://' + find_ip('camera') + ':8000/'
     master = True
 
-def get_imgs():
+app = Flask(__name__)
+
+@app.route('/get_cube_state/', methods=['GET'])
+def get_cube_state():
+    return jsonify(cube.get_cube_state())
+
+@app.route('/get_images/', methods=['GET'])
+def get_images():
     """
     Get images from the local camera and from the remote camera.
     Return images as pickle.
@@ -81,28 +88,16 @@ def get_imgs():
     rawCapture.truncate(0)
     return pickle.dumps(image)
 
-app = Flask(__name__)
-
-@app.route('/get_cube_state/', methods=['GET'])
-def get_cube_state():
-    return jsonify(cube.get_cube_state())
-
-@app.route('/get_images/', methods=['GET'])
-def get_images():
-    return get_imgs()
-
 @app.route('/get_device/', methods=['GET'])
 def get_device():
     return server_type
 
-@app.route('/', methods=['POST'])
-def receive_request():
+@app.route('/move', methods=['POST'])
+def move():
     """
     Receive a request from the client with the move to be made and rotate the
     cube according to the move.
-    Subsequently gets the image from the local camera and from the remote camera
-    to generate the complete view of the Rubik's cube.
-    Return images and cube state as pickle.
+
     """
     if master:
         move = request.data.decode('utf-8')
@@ -116,13 +111,7 @@ def receive_request():
         elif move == 'random':
             cube.random_move()
 
-        # Define cube state
-        cube_state = cube.get_cube_state()
-
-        # Get images
-        images = pickle.loads(get_imgs())
-        response = pickle.dumps(images + [cube_state])
-        return response
+        return 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000, debug=True)
