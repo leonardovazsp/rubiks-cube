@@ -9,9 +9,15 @@ import pickle
 import hmac
 import hashlib
 import subprocess
+import ngrok
 from picamera import PiCamera
 from picamera.array import PiRGBArray
 from flask import Flask, jsonify, request
+
+port = os.environ["RUBIKS_PORT"]
+domain = os.environ["NGROK_DOMAIN"]
+listener = ngrok.forward(port, domain=domain, authtoken_from_env=True)
+print(f"Ingress established at {listener.url()}")
 
 WEBHOOK_SECRET = b'leo123456'
 
@@ -158,4 +164,4 @@ def is_valid_signature(payload, signature):
     return hmac.compare_digest(mac.hexdigest(), signature)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000, debug=False)
+    app.run(host='0.0.0.0', port=port, debug=False)
