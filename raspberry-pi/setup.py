@@ -21,7 +21,8 @@ def create_virtualenv(path):
 def install_requirements(venv_path, requirements_path):
     """Install requirements from a requirements.txt file."""
     pip_executable = os.path.join(venv_path, 'bin', 'pip')
-    subprocess.check_call([pip_executable, 'install', '-r', requirements_path])
+    # subprocess.check_call([pip_executable, 'install', '-r', requirements_path])
+    subprocess.check_call([pip_executable, 'install', '--no-cache-dir', '-r', requirements_path])
     print("Requirements installed.")
 
 # def install_ngrok(authtoken):
@@ -62,7 +63,6 @@ After=network.target
 {environment_variables}
 User=pi
 WorkingDirectory={app_dir}
-ExecStartPre={app_dir}/ngrok.sh
 ExecStart={venv_path}/bin/python {app_dir}/main.py
 Restart=on-failure
 
