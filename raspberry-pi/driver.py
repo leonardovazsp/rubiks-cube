@@ -16,7 +16,7 @@ COMMANDS = {
     "back_rev": (1, "xccw")
     }
 
-PORTS = ['ttyUSB0', 'ttyUSB1']
+PORTS = ['ttyUSB2', 'ttyUSB3']
 SLEEP_TIME = 2
 SMALL_SLEEP_TIME = 0.01
 
@@ -69,6 +69,18 @@ class Driver():
         assert move in COMMANDS, f"move must belong to the set of moves {list(COMMANDS.keys())}"
         device, command = COMMANDS[move]
         self.devices[device].send_command(command)
+
+    def activate(self):
+        for device in self.devices.values():
+            device.send_command('activate')
+
+    def deactivate(self):
+        for device in self.devices.values():
+            device.send_command('deactivate')
+
+    def set_delay(self, delay):
+        for device in self.devices.values():
+            device.send_command('set_delay:' + str(delay))
 
 if __name__ == "__main__":
     driver = Driver()
