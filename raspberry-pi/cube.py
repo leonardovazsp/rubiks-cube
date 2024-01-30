@@ -63,10 +63,19 @@ class Cube:
 
     def scramble(self, n):
         # Scramble the cube
+        available_moves = copy.deepcopy(self.moves_list)
+        last_move = None
         for i in range(n):
-            move = random.choice(self.moves_list)
+            if last_move:
+                if last_move[-4:] == '_rev':
+                    available_moves.remove(last_move[:-4])
+                else:
+                    available_moves.remove(last_move + '_rev')
+            move = random.choice(available_moves)
+            last_move = move
+            available_moves = copy(self.moves_list)
             getattr(self, move)()
-    
+            
     def top(self):
         # Rotate the top face clockwise
         self.driver.move_cube('top')
