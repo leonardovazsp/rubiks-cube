@@ -5,8 +5,10 @@ const int xDir = 5;
 const int yDir = 6;
 const int zDir = 7;
 const int enablePin = 8;
+const String device = "0";
 String inputString = ""; 
 bool stringComplete = false;
+int globalDelay = 1000;
 
 void setup() {
   Serial.begin(9600);
@@ -32,7 +34,7 @@ void loop() {
   if (stringComplete) {
     inputString.trim();
     if (inputString == "get_device") {
-      Serial.println("0");
+      Serial.println(device);
       inputString = "";
       }
     else {
@@ -62,14 +64,26 @@ void executeCommand(String command) {
     else if (command == "xccw") rotateMotor(xStep, xDir, false);
     else if (command == "activate") digitalWrite(enablePin, LOW);
     else if (command == "deactivate") digitalWrite(enablePin, HIGH);
+    else if (command.startsWith("set_delay:")) {
+      int colonIndex = command.indexOf(':');
+      String delayString = command.substring(colonIndex + 1);
+
+      int delayValue = delayString.toInt();
+
+      setDelay(delayValue);
+    }
+}
+
+void setDelay(int newDelay) {
+  globalDelay = newDelay;
 }
 
 void rotateMotor(int stepPin, int dirPin, bool clockwise) {
   digitalWrite(dirPin, clockwise ? HIGH : LOW);
   for(int i = 0; i<50; i++) {
     digitalWrite(stepPin, HIGH);
-    delayMicroseconds(4000);
+    delayMicroseconds(globalDelay);
     digitalWrite(stepPin, LOW);
-    delayMicroseconds(4000);
+    delayMicroseconds(globalDelay);
   }
 }
