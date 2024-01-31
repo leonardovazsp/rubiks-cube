@@ -5,7 +5,7 @@ const int xDirPin = 5;
 const int yDirPin = 6;
 const int zDirPin = 7;
 const int enablePin = 8;
-const String device = "0";
+const String device = "1";
 String inputString = ""; 
 bool stringComplete = false;
 int globalDelay = 1000;
@@ -48,8 +48,18 @@ void serialEvent() {
     else {inputString += inChar;}
   }
 }
+
+void rotateMotor(int stepPin, int dirPin, bool clockwise, int steps = 50) {
+  digitalWrite(dirPin, clockwise ? HIGH : LOW);
+  for(int i = 0; i < steps; i++) {
+    digitalWrite(stepPin, HIGH);
+    delayMicroseconds(globalDelay);
+    digitalWrite(stepPin, LOW);
+    delayMicroseconds(globalDelay);
+  }
+}
+
 void executeCommand(String command) {
-    "rotate:x,cw,50"
     if (command.startsWith("rotate:")) {
         int colonIndex = command.indexOf(':');
         int commaIndex = command.indexOf(',');
@@ -79,14 +89,4 @@ void executeCommand(String command) {
 
 void setDelay(int newDelay) {
   globalDelay = newDelay;
-}
-
-void rotateMotor(int stepPin, int dirPin, bool clockwise, int steps = 50) {
-  digitalWrite(dirPin, clockwise ? HIGH : LOW);
-  for(int i = 0; i < steps; i++) {
-    digitalWrite(stepPin, HIGH);
-    delayMicroseconds(globalDelay);
-    digitalWrite(stepPin, LOW);
-    delayMicroseconds(globalDelay);
-  }
 }
