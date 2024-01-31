@@ -1,22 +1,23 @@
 import serial
 import time
+import os
 
 COMMANDS = {
-    "top": (0, "zcw"),
-    "top_rev": (0, "zccw"),
-    "right": (0, "ycw"),
-    "right_rev": (0, "yccw"),
-    "front": (0, "xcw"),
-    "front_rev": (0, "xccw"),
-    "bottom": (1, "zcw"),
-    "bottom_rev": (1, "zccw"),
-    "left": (1, "ycw"),
-    "left_rev": (1, "yccw"),
-    "back": (1, "xcw"),
-    "back_rev": (1, "xccw")
+    "top": (0, "rotate:z,cw"),
+    "top_rev": (0, "rotate:z,ccw"),
+    "right": (0, "rotate:y,cw"),
+    "right_rev": (0, "rotate:y,ccw"),
+    "front": (0, "rotate:x,cw"),
+    "front_rev": (0, "rotate:x,ccw"),
+    "bottom": (1, "rotate:z,cw"),
+    "bottom_rev": (1, "rotate:z,ccw"),
+    "left": (1, "rotate:y,cw"),
+    "left_rev": (1, "rotate:y,ccw"),
+    "back": (1, "rotate:x,cw"),
+    "back_rev": (1, "rotate:x,ccw")
     }
 
-PORTS = ['ttyUSB2', 'ttyUSB3']
+PORTS = [a for a in os.listdir("/dev") if 'USB' in a]
 SLEEP_TIME = 2
 SMALL_SLEEP_TIME = 0.01
 
@@ -68,6 +69,12 @@ class Driver():
         assert type(move) == str, f"move must be a string belonging to the set {list(COMMANDS.keys())}"
         assert move in COMMANDS, f"move must belong to the set of moves {list(COMMANDS.keys())}"
         device, command = COMMANDS[move]
+        command += ',50'
+        self.devices[device].send_command(command)
+
+    def fine_move(self, move : str, steps : int=1):
+        device, command = COMMANDS[move]
+        command += ',' + str(steps)
         self.devices[device].send_command(command)
 
     def activate(self):

@@ -1,9 +1,9 @@
-const int xStep = 2;
-const int yStep = 3;
-const int zStep = 4;
-const int xDir = 5;
-const int yDir = 6;
-const int zDir = 7;
+const int xStepPin = 2;
+const int yStepPin = 3;
+const int zStepPin = 4;
+const int xDirPin = 5;
+const int yDirPin = 6;
+const int zDirPin = 7;
 const int enablePin = 8;
 const String device = "0";
 String inputString = ""; 
@@ -13,21 +13,14 @@ int globalDelay = 1000;
 void setup() {
   Serial.begin(9600);
   inputString.reserve(200);
-  pinMode(xStep, OUTPUT);
-  pinMode(yStep, OUTPUT);
-  pinMode(zStep, OUTPUT);
-  pinMode(xDir, OUTPUT);
-  pinMode(yDir, OUTPUT);
-  pinMode(zDir, OUTPUT);
+  pinMode(xStepPin, OUTPUT);
+  pinMode(yStepPin, OUTPUT);
+  pinMode(zStepPin, OUTPUT);
+  pinMode(xDirPin, OUTPUT);
+  pinMode(yDirPin, OUTPUT);
+  pinMode(zDirPin, OUTPUT);
   pinMode(enablePin, OUTPUT);
   digitalWrite(enablePin, HIGH);
-
-  digitalWrite(xStep, LOW);
-  digitalWrite(yStep, LOW);
-  digitalWrite(zStep, LOW);
-  digitalWrite(xDir, LOW);
-  digitalWrite(yDir, LOW);
-  digitalWrite(zDir, LOW);
 }
 
 void loop() {
@@ -56,12 +49,22 @@ void serialEvent() {
   }
 }
 void executeCommand(String command) {
-    if (command == "zcw") rotateMotor(zStep, zDir, true);
-    else if (command == "zccw") rotateMotor(zStep, zDir, false);
-    else if (command == "ycw") rotateMotor(yStep, yDir, true);
-    else if (command == "yccw") rotateMotor(yStep, yDir, false);
-    else if (command == "xcw") rotateMotor(xStep, xDir, true);
-    else if (command == "xccw") rotateMotor(xStep, xDir, false);
+    "rotate:x,cw,50"
+    if (command.startsWith("rotate:")) {
+        int colonIndex = command.indexOf(':');
+        int commaIndex = command.indexOf(',');
+        int secondCommaIndex = command.indexOf(',', commaIndex + 1);
+    
+        String axisString = command.substring(colonIndex + 1, commaIndex);
+        String directionString = command.substring(commaIndex + 1, secondCommaIndex);
+        String stepsString = command.substring(secondCommaIndex + 1);
+    
+        int stepsValue = stepsString.toInt();
+    
+        if (axisString == "x") rotateMotor(xStepPin, xDirPin, directionString == "cw", stepsValue);
+        else if (axisString == "y") rotateMotor(yStepPin, yDirPin, directionString == "cw", stepsValue);
+        else if (axisString == "z") rotateMotor(zStepPin, zDirPin, directionString == "cw", stepsValue);
+    }
     else if (command == "activate") digitalWrite(enablePin, LOW);
     else if (command == "deactivate") digitalWrite(enablePin, HIGH);
     else if (command.startsWith("set_delay:")) {
@@ -78,9 +81,9 @@ void setDelay(int newDelay) {
   globalDelay = newDelay;
 }
 
-void rotateMotor(int stepPin, int dirPin, bool clockwise) {
+void rotateMotor(int stepPin, int dirPin, bool clockwise, int steps = 50) {
   digitalWrite(dirPin, clockwise ? HIGH : LOW);
-  for(int i = 0; i<50; i++) {
+  for(int i = 0; i < steps; i++) {
     digitalWrite(stepPin, HIGH);
     delayMicroseconds(globalDelay);
     digitalWrite(stepPin, LOW);
