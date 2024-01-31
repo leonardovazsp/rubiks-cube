@@ -73,7 +73,7 @@ class Cube:
                     available_moves.remove(last_move + '_rev')
             move = random.choice(available_moves)
             last_move = move
-            available_moves = copy(self.moves_list)
+            available_moves = copy.deepcopy(self.moves_list)
             getattr(self, move)()
             
     def top(self):
