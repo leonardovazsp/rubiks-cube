@@ -61,6 +61,9 @@ class Cube:
         # Get the cube state
         return self.state
 
+    def fine_move(self, steps):
+        self.driver.fine_move(steps)
+
     def scramble(self, n):
         # Scramble the cube
         available_moves = copy.deepcopy(self.moves_list)
