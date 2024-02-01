@@ -20,6 +20,9 @@ class Dataset():
         total_examples = len(os.listdir('data')) // 3 # 3 files per example
         return total_examples
 
+    def __len__(self):
+        return self.size
+
     def set_masks(self, path):
         """
         Sets the masks for each camera.

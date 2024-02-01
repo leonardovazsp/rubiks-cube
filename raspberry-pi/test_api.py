@@ -13,14 +13,16 @@ add_url = url + '/add'
 train_url = url + '/train'
 predict_url = url + '/predict'
 
-state = np.random.randint(0, 6, (6, 3, 3), dtype=np.uint8)
+for i in range(5):
 
-img1 = Image.fromarray(np.random.randint(0, 255, (480, 640, 3), dtype=np.uint8))
-img2 = Image.fromarray(np.random.randint(0, 255, (480, 640, 3), dtype=np.uint8))
+    state = np.random.randint(0, 6, (6, 3, 3), dtype=np.uint8)
 
-images = [img1, img2]
+    img1 = Image.fromarray(np.random.randint(0, 255, (480, 640, 3), dtype=np.uint8))
+    img2 = Image.fromarray(np.random.randint(0, 255, (480, 640, 3), dtype=np.uint8))
 
-payload = pickle.dumps({'images': images, 'state': state})
+    images = [img1, img2]
 
-response = requests.post(add_url, data=payload)
-print(response.json())
+    payload = pickle.dumps({'images': images, 'state': state})
+
+    response = requests.post(add_url, data=payload)
+    print(response.json())
