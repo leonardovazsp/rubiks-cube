@@ -1,5 +1,6 @@
 import os
 from PIL import Image
+import numpy as np
 
 if not os.path.exists('data'):
     os.mkdir('data')
@@ -42,8 +43,7 @@ class Dataset():
         """
         example_num = self.size
         for i, image in enumerate(images):
-            with open(f'data/{example_num}_{i}.jpg', 'wb') as f:
-                f.write(image)
+            image.save(f'data/{example_num}_{i}.jpg')
 
         with open(f'data/{example_num}.npy', 'wb') as f:
             np.save(f, state)

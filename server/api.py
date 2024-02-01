@@ -3,8 +3,10 @@ import os
 import pickle
 import numpy as np
 import json
+from dataset import Dataset
+import numpy as np
 
-
+dataset = Dataset()
 
 app = Flask(__name__)
 
@@ -17,14 +19,7 @@ def add():
     data = pickle.loads(request.data)
     images = data['images']
     state = data['state']
-    example_num = get_example_num()
-
-    for i, image in enumerate(images):
-        with open(f'data/{example_num}_{i}.jpg', 'wb') as f:
-            f.write(image)
-
-    with open(f'data/{example_num}.npy', 'wb') as f:
-        np.save(f, state)
+    dataset.save_example(images, state)
 
     return jsonify({'success': True})
     
@@ -43,3 +38,6 @@ def train():
 @app.route('/predict', methods=['POST'])
 def predict():
     pass
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
