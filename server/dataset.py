@@ -43,6 +43,10 @@ class Dataset():
     def save_example(self, images, state):
         """
         Saves an example to the data folder.
+
+        Args:
+            images: list of 2 images
+            state: numpy array of the cube state
         """
         example_num = self.size
         for i, image in enumerate(images):
