@@ -9,8 +9,8 @@ import time
 
 print('Testing API...')
 
-# url = 'http://rubiks.ngrok.io'
-url = 'http://192.168.7.208:5000'
+url = 'http://rubiks.ngrok.io'
+# url = 'http://192.168.7.208:5000'
 add_url = url + '/add'
 train_url = url + '/train'
 predict_url = url + '/predict'

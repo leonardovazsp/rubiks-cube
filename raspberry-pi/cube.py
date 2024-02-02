@@ -20,7 +20,6 @@ class Cube:
         self.history = self.load_history()
         self.moves_list = list(COMMANDS.keys())
         self.driver = Driver()
-        # self.moves = [self.right, self.right_rev, self.left, self.left_rev, self.top, self.top_rev, self.bottom, self.bottom_rev, self.front, self.front_rev, self.back, self.back_rev]
 
     def load_state(self):
         # Load the cube state
