@@ -1,13 +1,15 @@
 import os
-from PIL import Image
+import torch
+import random
 import numpy as np
+from PIL import Image
 from torchvision import transforms
 
 if not os.path.exists('data'):
     os.mkdir('data')
 
 class Dataset():
-    def __init__(self, resolution=(224, 224)):
+    def __init__(self, resolution=(96, 96)):
         self.resolution = resolution
         self.masks = None
         self.backgrounds = None
@@ -91,7 +93,7 @@ class Dataset():
         background = background.resize(images[0].shape[:2][::-1])
         background = np.array(background) / 255.
         output = []
-        for img, mask in zip(images, masks):
+        for img, mask in zip(images, self.masks):
             img = img/255.
             img = img * mask + background * (1 - mask)
             img = Image.fromarray((img * 255).astype(np.uint8))
@@ -187,5 +189,7 @@ class Dataset():
             state: numpy array of the cube state
         """
         images, state = self._load_example(idx)
-        images = self._augment(images, chance=1)
+        images = self._augment(images, chance=0.5)
+        images = [torch.tensor(np.array(img).transpose(2, 0, 1)).float() for img in images]
+        state = torch.tensor(state).float()
         return images, state
