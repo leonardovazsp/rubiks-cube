@@ -9,6 +9,10 @@ if not os.path.exists('data'):
     os.mkdir('data')
 
 class Dataset():
+    """
+    Dataset class for the Rubik's Cube.
+
+    """
     def __init__(self, resolution=(96, 96)):
         self.resolution = resolution
         self.masks = None
@@ -19,9 +23,8 @@ class Dataset():
         """
         Returns the size of the dataset.
         """
-        total_files = len(os.listdir('data'))
-        total_examples = len(os.listdir('data')) // 3 # 3 files per example
-        return total_examples
+        files = [f for f in os.listdir('data') if f.endswith('.npy')]
+        return len(files)
 
     def __len__(self):
         return self.size
@@ -188,6 +191,9 @@ class Dataset():
             images: list of 2 images
             state: numpy array of the cube state
         """
+        if idx >= self.size:
+            raise IndexError(f'Index {idx} out of range for dataset of size {self.size}')
+        
         images, state = self._load_example(idx)
         images = self._augment(images, chance=0.5)
         images = [torch.tensor(np.array(img).transpose(2, 0, 1)).float() for img in images]
