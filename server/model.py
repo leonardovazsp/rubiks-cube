@@ -6,6 +6,18 @@ from data_pipeline import Dataset
 from torch.optim.lr_scheduler import ExponentialLR
 
 class ConvBlock(Module):
+    """
+    Building block for the convolutional layers.
+    It consists of a convolutional layer, a batch normalization layer, and a max
+    pooling layer, which may or may not be included.
+
+    Args:
+        in_channels (int): number of input channels
+        out_channels (int): number of output channels
+        pool (bool): whether to include a max pooling layer
+        dropout (float): dropout rate
+
+    """
     def __init__(self, in_channels, out_channels, pool=False, dropout=None):
         super().__init__()
         self.dropout = Dropout(dropout) if dropout else None
@@ -22,6 +34,18 @@ class ConvBlock(Module):
         return self.pool(x) if self.pool else x
     
 class SingleImageModel(Module):
+    """
+    This model takes an image of a Rubik's Cube with a complete view of 3 faces
+    and outputs the state of theses faces in the shape of (batch_size, 27, 6).
+
+    Args:
+        input_shape (tuple): shape of the input image
+        kernel_size (int): size of the convolutional kernel
+        channels_list (list): list of the number of channels for each convolutional layer
+        pool_list (list): list of booleans indicating whether to include a max pooling layer
+        fc_sizes (list): list of the number of neurons for each fully connected layer
+        dropout (float): dropout rate
+    """
     def __init__(self,
                  input_shape = (3, 96, 96),
                  kernel_size = 3,
@@ -58,6 +82,13 @@ class SingleImageModel(Module):
         return x.view(-1, 27, 6)
         
 class Model(Module):
+    """
+    This model takes two images of a Rubik's Cube with a complete view of 3 faces
+    and outputs the state of theses faces in the shape of (batch_size, 27, 6).
+
+    Args:
+        input_shape (tuple): shape of the input image
+    """
     def __init__(self, input_shape=(3, 96, 96)):
         super().__init__()
         self.single_image_model = SingleImageModel(input_shape=input_shape)
