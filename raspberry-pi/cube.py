@@ -60,8 +60,8 @@ class Cube:
         # Get the cube state
         return self.state
 
-    def fine_move(self, steps):
-        self.driver.fine_move(steps)
+    def fine_move(self, move, steps=1):
+        self.driver.fine_move(move, steps=steps)
 
     def scramble(self, n):
         # Scramble the cube
