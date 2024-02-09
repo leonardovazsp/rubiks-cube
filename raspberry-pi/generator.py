@@ -39,20 +39,20 @@ class Generator():
             elif step > 0:
                 self.cube.fine_move(move + '_rev', step)
 
-    def generate(self, examples=100):
+    def generate(self, examples=100, scramble=2):
         for i in range(examples):
-            self.cube.scramble(5)
-            time.sleep(2)
+            self.cube.scramble(2)
+            time.sleep(0.5)
             steps = self.random_fine_moves()
             time.sleep(0.5)
             example_num = self.num_examples
             self.save_picture(example_num)
             self.save_moves(steps, example_num)
             self.revert_moves(steps)
-            time.sleep(2)
+            time.sleep(0.5)
 
     def save_picture(self, example_num):
-        subprocess.call(['rpicam-jpeg', '-o', self.save_dir + f'/{example_num}.jpg', '-t', '200', '--width', '480', '--height', '480'])
+        subprocess.call(['rpicam-jpeg', '-o', self.save_dir + f'/{example_num}.jpg', '-t', '10', '--width', '480', '--height', '480', '-v', '0', '--camera', '1'])
 
     def save_moves(self, steps, example_num):
         np.save(self.save_dir + f'/{example_num}.npy', steps)

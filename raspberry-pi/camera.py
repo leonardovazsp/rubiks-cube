@@ -1,6 +1,8 @@
-import cv2
+import subprocess
+from PIL import Image
+import os
 
-class Camera():
+class Cameras():
     """
     Camera class to capture images from both cameras.
     
@@ -10,31 +12,41 @@ class Camera():
     """
     def __init__(self,
                  resolution=(224, 224),
+                 directory='images',
         ):
         self.type = type
         self.resolution = resolution
-        self.cameras = self._initialize_cameras()
+        self.directory = directory
+        if not os.path.exists(self.directory):
+            os.makedirs(self.directory)
 
-    def _initialize_cameras(self):
+    def _capture(self, camera):
         """
-        Initialize the cameras.
+        Capture image from the camera.
         """
+        subprocess.call(['rpicam-jpeg',
+                         '-o', f'{self.directory}/camera{camera}.jpg',
+                         '--width', str(self.resolution[0]),
+                         '--height', str(self.resolution[1]),
+                         '-t', '10',
+                         '-v', '0',
+                         '--camera', str(camera)])
 
-        cameras = []
-        for idx in range(2):
-            camera = cv2.VideoCapture(idx)
-            camera.set(3, self.resolution[0])
-            camera.set(4, self.resolution[1])
-            cameras.append(camera)
-        return cameras
+        with open(f'{self.directory}/camera{camera}.jpg', 'rb') as f:
+            img = Image.open(f)
+            return img
+
         
-    def capture(self):
+    def capture(self, camera=None):
         """
-        Capture images from both cameras.
+        Capture images from the cameras.
         """
-        images = []
-        for camera in self.cameras:
-            ret, frame = camera.read()
-            images.append(frame)
-        return images
+        if camera is None:
+            img0 = self._capture(0)
+            img1 = self._capture(1)
+            return img0, img1
+        else:
+            return self._capture(camera)
+
+        
 
