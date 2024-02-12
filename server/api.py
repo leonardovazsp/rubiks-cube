@@ -5,6 +5,9 @@ import numpy as np
 import json
 from dataset import Dataset
 import numpy as np
+import sys
+from trainer import Trainer
+import model as models
 
 dataset = Dataset()
 
@@ -26,6 +29,8 @@ def add():
 @app.route('/train', methods=['POST'])
 def train():
     data = json.loads(request.data)
+    model_name = data.get('model', 'ColorRecognizer')
+    checkpoint = data.get('checkpoint', None)
     epochs = data.get('epochs', 10)
     lr = data.get('lr', 0.001)
     batch_size = data.get('batch_size', 32)
@@ -33,7 +38,15 @@ def train():
     save_model = data.get('save_model', True)
     save_history = data.get('save_history', True)
     split = data.get('split', 0.2)
-    pass
+    optimizer = data.get('optimizer', 'Adam')
+    criterion = data.get('criterion', 'CrossEntropyLoss')
+    device = data.get('device', 'cpu')
+    wandb_project = data.get('wandb_project', None)
+    save_dir = data.get('save_dir', 'models')
+    kwargs = data.get('kwargs', {})
+    model = models.__dict__[model_name]()
+    trainer = Trainer(model, dataset, optimizer, criterion, device, batch_size, shuffle, split, lr, wandb_project, save_dir, **kwargs)
+    trainer.train(epochs)
 
 @app.route('/predict', methods=['POST'])
 def predict():

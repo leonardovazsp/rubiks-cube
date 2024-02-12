@@ -26,6 +26,13 @@ class Dataset():
         files = [f for f in os.listdir('data') if f.endswith('.npy')]
         return len(files)
 
+    @property
+    def config(self):
+        return {
+            'resolution': self.resolution,
+            'backgrounds': self.backgrounds is not None,
+        }
+
     def __len__(self):
         return self.size
 

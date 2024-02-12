@@ -1,4 +1,4 @@
-from model import SingleImageModel, Model
+from model import SingleImageModel, ColorRecognizer
 from dataset import Dataset
 from torch.utils.data import DataLoader, random_split
 import torch
@@ -9,7 +9,7 @@ input_shape = (3, *resolution)
 split_ratio = 0.8
 
 single_image_model = SingleImageModel(input_shape=input_shape)
-model = Model(input_shape=input_shape)
+model = ColorRecognizer(input_shape=input_shape)
 dataset = Dataset(resolution)
 
 train_size = int(split_ratio * len(dataset))

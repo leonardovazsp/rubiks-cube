@@ -2,7 +2,7 @@ import torch
 from torch.nn import Module, Linear, ReLU, ModuleList, Conv2d, MaxPool2d, Flatten, Dropout, functional as F
 from torch.optim import Adam
 from torch.utils.data import DataLoader
-from data_pipeline import Dataset
+# from data_pipeline import Dataset
 from torch.optim.lr_scheduler import ExponentialLR
 
 class ConvBlock(Module):
@@ -54,6 +54,13 @@ class SingleImageModel(Module):
                  fc_sizes = [1024, 2048, 1024, 27 * 6],
                  dropout = 0.1):
         super().__init__()
+        self.input_shape = input_shape
+        self.kernel_size = kernel_size
+        self.channels_list = channels_list
+        self.pool_list = pool_list
+        self.fc_sizes = fc_sizes
+        self.dropout = dropout
+
         self.conv_blocks = ModuleList([ConvBlock(in_channels, out_channels, pool=pool) 
                                                 for in_channels, out_channels, pool in zip(channels_list[:-1], channels_list[1:], pool_list)])
         output_shape = input_shape
@@ -67,7 +74,17 @@ class SingleImageModel(Module):
 
         self.fc = ModuleList([Linear(in_features, out_features) for in_features, out_features in zip(self.fc_sizes[:-1], self.fc_sizes[1:])])
         
-        
+    @property
+    def config(self):
+        return {
+            'input_shape': self.input_shape,
+            'kernel_size': self.kernel_size,
+            'channels_list': self.channels_list,
+            'pool_list': self.pool_list,
+            'fc_sizes': self.fc_sizes,
+            'dropout': self.dropout
+        }
+
     def forward(self, x):
         for conv_block in self.conv_blocks:
             x = conv_block(x)
@@ -81,7 +98,7 @@ class SingleImageModel(Module):
 
         return x.view(-1, 27, 6)
         
-class Model(Module):
+class ColorRecognizer(Module):
     """
     This model takes two images of a Rubik's Cube with a complete view of 3 faces
     and outputs the state of theses faces in the shape of (batch_size, 27, 6).
@@ -89,9 +106,38 @@ class Model(Module):
     Args:
         input_shape (tuple): shape of the input image
     """
-    def __init__(self, input_shape=(3, 96, 96)):
+    def __init__(self,
+                 input_shape = (3, 96, 96),
+                 kernel_size = 3,
+                 channels_list = [3, 8, 16, 32, 64, 128, 256, 512, 1024],
+                 pool_list = [True, True, False, False, False, False, True, True],
+                 fc_sizes = [1024, 2048, 1024, 27 * 6],
+                 dropout = 0.1):
         super().__init__()
-        self.single_image_model = SingleImageModel(input_shape=input_shape)
+        self.input_shape = input_shape
+        self.kernel_size = kernel_size
+        self.channels_list = channels_list
+        self.pool_list = pool_list
+        self.fc_sizes = fc_sizes
+        self.dropout = dropout
+
+        self.single_image_model = SingleImageModel(input_shape=input_shape,
+                                                    kernel_size=kernel_size,
+                                                    channels_list=channels_list,
+                                                    pool_list=pool_list,
+                                                    fc_sizes=fc_sizes,
+                                                    dropout=dropout
+                                                    )
+    @property
+    def config(self):
+        return {
+            'input_shape': self.input_shape,
+            'kernel_size': self.kernel_size,
+            'channels_list': self.channels_list,
+            'pool_list': self.pool_list,
+            'fc_sizes': self.fc_sizes,
+            'dropout': self.dropout
+        }
 
     def _process_outputs(self, out1, out2):
         # shape of out1 and out2: (batch_size, 27, 6)
@@ -118,20 +164,25 @@ class Model(Module):
         preds = self._process_outputs(preds_1, preds_2)
         return preds
     
-    def training_step(self, batch):
+    def training_step(self, batch, optimizer, criterion):
+        self.train()
         images, labels = batch
         labels = labels.view(-1, 54).long() # (batch_size, 6, 3, 3) -> (batch_size, 54)
         out = self(images) # (batch_size, 6, 54)
-        loss = F.cross_entropy(out, labels)
+        loss = criterion(out, labels)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
         _, preds = torch.max(out, dim=1)
         acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*54))
-        return {'loss': loss, 'acc': acc}
+        return {'loss': loss.detach(), 'acc': acc}
     
-    def validation_step(self, batch):
+    def validation_step(self, batch, criterion):
+        self.eval()
         images, labels = batch
         labels = labels.view(-1, 54).long() # (batch_size, 6, 3, 3) -> (batch_size, 54)
         out = self(images)
-        loss = F.cross_entropy(out, labels)
+        loss = criterion(out, labels)
         _, preds = torch.max(out, dim=1)
         acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*54))
         return {'val_loss': loss.detach(), 'val_acc': acc}
