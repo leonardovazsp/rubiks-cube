@@ -1,0 +1,31 @@
+from camera import Cameras
+
+cameras = Cameras()
+
+print("Testing camera 0:")
+img = cameras.capture(camera=0)
+print(f"Image size: {img.size}")
+print(f"Image mode: {img.mode}")
+print(f"Image format: {img.format}")
+print()
+print("=" * 50)
+
+print("Testing camera 1:")
+img = cameras.capture(camera=1)
+print(f"Image size: {img.size}")
+print(f"Image mode: {img.mode}")
+print(f"Image format: {img.format}")
+print()
+print("=" * 50)
+
+print("Testing both cameras:")
+img0, img1 = cameras.capture()
+print(f"Image 0 size: {img0.size}")
+print(f"Image 0 mode: {img0.mode}")
+print(f"Image 0 format: {img0.format}")
+print()
+print(f"Image 1 size: {img1.size}")
+print(f"Image 1 mode: {img1.mode}")
+print(f"Image 1 format: {img1.format}")
+print()
+print("=" * 50)

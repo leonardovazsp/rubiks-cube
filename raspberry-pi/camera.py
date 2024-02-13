@@ -32,9 +32,8 @@ class Cameras():
                          '-v', '0',
                          '--camera', str(camera)])
 
-        with open(f'{self.directory}/camera{camera}.jpg', 'rb') as f:
-            img = Image.open(f)
-            return img
+        img = Image.open(f'{self.directory}/camera{camera}.jpg')
+        return img
 
         
     def capture(self, camera=None):

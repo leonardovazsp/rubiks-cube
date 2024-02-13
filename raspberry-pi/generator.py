@@ -15,11 +15,15 @@ class Generator():
         files = [f for f in os.listdir(self.save_dir) if f.endswith('.jpg')]
         return len(files)
 
-    def random_fine_moves(self, max_moves=6):
+    def random_fine_moves(self, max_moves=6, min_moves=4):
         steps = []
         for i in range(6):
             if np.random.rand() > 0.5:
                 n = np.random.randint(-max_moves, max_moves)
+                if n < 0:
+                    n = min(n, -min_moves)
+                else:
+                    n = max(n, min_moves)
                 steps.append(n)
             else:
                 steps.append(0)
@@ -39,9 +43,9 @@ class Generator():
             elif step > 0:
                 self.cube.fine_move(move + '_rev', step)
 
-    def generate(self, examples=100, scramble=2):
+    def generate(self, examples=100, scramble=1):
         for i in range(examples):
-            self.cube.scramble(2)
+            self.cube.scramble(scramble)
             time.sleep(0.5)
             steps = self.random_fine_moves()
             time.sleep(0.5)
