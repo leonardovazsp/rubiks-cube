@@ -33,7 +33,7 @@ class ConvBlock(Module):
         x = self.batch_norm(x)
         return self.pool(x) if self.pool else x
     
-class SingleImageModel(Module):
+class Encoder(Module):
     """
     This model takes an image of a Rubik's Cube with a complete view of 3 faces
     and outputs the state of theses faces in the shape of (batch_size, 27, 6).
@@ -51,7 +51,7 @@ class SingleImageModel(Module):
                  kernel_size = 3,
                  channels_list = [3, 8, 16, 32, 64, 128, 256, 512, 1024],
                  pool_list = [True, True, False, False, False, False, True, True],
-                 fc_sizes = [1024, 2048, 1024, 27 * 6],
+                 fc_sizes = [1024, 2048, 1024],
                  dropout = 0.1):
         super().__init__()
         self.input_shape = input_shape
@@ -96,7 +96,7 @@ class SingleImageModel(Module):
                 x = ReLU()(x)
                 x = Dropout(0.1)(x)
 
-        return x.view(-1, 27, 6)
+        return x
         
 class ColorRecognizer(Module):
     """
@@ -106,6 +106,90 @@ class ColorRecognizer(Module):
     Args:
         input_shape (tuple): shape of the input image
     """
+    def __init__(self,
+                 input_shape = (3, 96, 96),
+                 kernel_size = 3,
+                 channels_list = [3, 8, 16, 32, 64, 128, 256, 512, 1024],
+                 pool_list = [True, True, False, False, False, False, True, True],
+                 fc_sizes = [1024, 2048, 1024],
+                 dropout = 0.1):
+        super().__init__()
+        self.input_shape = input_shape
+        self.kernel_size = kernel_size
+        self.channels_list = channels_list
+        self.pool_list = pool_list
+        self.fc_sizes = fc_sizes
+        self.dropout = dropout
+
+        self.encoder = Encoder(input_shape=input_shape,
+                                kernel_size=kernel_size,
+                                channels_list=channels_list,
+                                pool_list=pool_list,
+                                fc_sizes=fc_sizes,
+                                dropout=dropout
+                                )
+        self.linear = Linear(fc_sizes[-1] * 2, 54 * 6)
+
+    @property
+    def config(self):
+        return {
+            'input_shape': self.input_shape,
+            'kernel_size': self.kernel_size,
+            'channels_list': self.channels_list,
+            'pool_list': self.pool_list,
+            'fc_sizes': self.fc_sizes,
+            'dropout': self.dropout
+        }
+
+    def _process_outputs(self, out1, out2):
+        # shape of out1 and out2: (batch_size, 27, 6)
+
+        # Stack the two outputs from each image
+        outputs = torch.stack([out1, out2], dim=1) # (batch_size, 54, 6)
+
+        # Reshape the outputs and transpose so that the value for each shape is in dimension 1
+        outputs = outputs.view(outputs.shape[0], 6, 54).permute(1, 0, 2) # (6, batch_size, 54)
+
+        # Adjust the order of the faces and permute the dimensions so that the batch size is the first dimension again
+        # Image 1 sees faces (0, 1, 4) and Image 2 sees faces (2, 3, 5)
+        # The output stack was (0, 1, 4, 2, 3, 5) and we want (0, 1, 2, 3, 4, 5)
+        outputs = outputs[[0, 1, 3, 4, 2, 5]].permute(1, 2, 0) # (batch_size, 54, 6)
+
+        # Reshape the outputs so that the last dimension is the 6 values for each face
+        outputs = outputs.reshape(-1, 6, 54) # (batch_size, 6, 54)
+        return outputs
+    
+    def forward(self, batch):
+        images_1, images_2 = batch
+        encoded_1 = self.encoder(images_1)
+        encoded_2 = self.encoder(images_2)
+        preds = self.linear(torch.cat([encoded_1, encoded_2], dim=1))
+        return preds.view(-1, 6, 54)
+    
+    def training_step(self, batch, optimizer, criterion):
+        self.train()
+        images, labels = batch
+        labels = labels.view(-1, 54).long() # (batch_size, 6, 3, 3) -> (batch_size, 54)
+        out = self(images) # (batch_size, 6, 54)
+        loss = criterion(out, labels)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        _, preds = torch.max(out, dim=1)
+        acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*54))
+        return {'loss': loss.detach(), 'acc': acc}
+    
+    def validation_step(self, batch, criterion):
+        self.eval()
+        images, labels = batch
+        labels = labels.view(-1, 54).long() # (batch_size, 6, 3, 3) -> (batch_size, 54)
+        out = self(images)
+        loss = criterion(out, labels)
+        _, preds = torch.max(out, dim=1)
+        acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*54))
+        return {'val_loss': loss.detach(), 'val_acc': acc}
+
+class AlignmentRecognizer(Module):
     def __init__(self,
                  input_shape = (3, 96, 96),
                  kernel_size = 3,
@@ -138,51 +222,3 @@ class ColorRecognizer(Module):
             'fc_sizes': self.fc_sizes,
             'dropout': self.dropout
         }
-
-    def _process_outputs(self, out1, out2):
-        # shape of out1 and out2: (batch_size, 27, 6)
-
-        # Stack the two outputs from each image
-        outputs = torch.stack([out1, out2], dim=1) # (batch_size, 54, 6)
-
-        # Reshape the outputs and transpose so that the value for each shape is in dimension 1
-        outputs = outputs.view(outputs.shape[0], 6, 54).permute(1, 0, 2) # (6, batch_size, 54)
-
-        # Adjust the order of the faces and permute the dimensions so that the batch size is the first dimension again
-        # Image 1 sees faces (0, 1, 4) and Image 2 sees faces (2, 3, 5)
-        # The output stack was (0, 1, 4, 2, 3, 5) and we want (0, 1, 2, 3, 4, 5)
-        outputs = outputs[[0, 1, 3, 4, 2, 5]].permute(1, 2, 0) # (batch_size, 54, 6)
-
-        # Reshape the outputs so that the last dimension is the 6 values for each face
-        outputs = outputs.reshape(-1, 6, 54) # (batch_size, 6, 54)
-        return outputs
-    
-    def forward(self, batch):
-        images_1, images_2 = batch
-        preds_1 = self.single_image_model(images_1)
-        preds_2 = self.single_image_model(images_2)
-        preds = self._process_outputs(preds_1, preds_2)
-        return preds
-    
-    def training_step(self, batch, optimizer, criterion):
-        self.train()
-        images, labels = batch
-        labels = labels.view(-1, 54).long() # (batch_size, 6, 3, 3) -> (batch_size, 54)
-        out = self(images) # (batch_size, 6, 54)
-        loss = criterion(out, labels)
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-        _, preds = torch.max(out, dim=1)
-        acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*54))
-        return {'loss': loss.detach(), 'acc': acc}
-    
-    def validation_step(self, batch, criterion):
-        self.eval()
-        images, labels = batch
-        labels = labels.view(-1, 54).long() # (batch_size, 6, 3, 3) -> (batch_size, 54)
-        out = self(images)
-        loss = criterion(out, labels)
-        _, preds = torch.max(out, dim=1)
-        acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*54))
-        return {'val_loss': loss.detach(), 'val_acc': acc}
