@@ -5,22 +5,22 @@ import torch
 import json
 
 train_params = {
-    'epochs': 10,
+    'epochs': 100,
     'batch_size': 4,
-    'lr': 0.001,
+    'lr': 0.0001,
     'shuffle': True,
     'save_model': True,
     'save_history': True,
-    'split': 0.2,
+    'split': 0.1,
     'optimizer': 'Adam',
-    'criterion': 'CrossEntropyLoss',
+    'criterion': 'MSELoss',
     'device': 'cuda',
-    'wandb_project': 'rubiks-cube-color-recognition',
+    'wandb_project': 'rubiks-cube-pose-estimation',
     'save_dir': 'models'
 }
 
 if __name__ == '__main__':
-    dataset = Dataset()
-    model = models.ColorRecognizer()
+    dataset = Dataset(model_type='pose_estimation')
+    model = models.PoseEstimator()
     trainer = Trainer(model=model, dataset=dataset, **train_params)
     trainer.train()

@@ -189,7 +189,7 @@ class ColorRecognizer(Module):
         acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*54))
         return {'val_loss': loss.detach(), 'val_acc': acc}
 
-class AlignmentRecognizer(Module):
+class PoseEstimator(Module):
     def __init__(self,
                  input_shape = (3, 96, 96),
                  kernel_size = 3,
@@ -205,13 +205,16 @@ class AlignmentRecognizer(Module):
         self.fc_sizes = fc_sizes
         self.dropout = dropout
 
-        self.single_image_model = SingleImageModel(input_shape=input_shape,
-                                                    kernel_size=kernel_size,
-                                                    channels_list=channels_list,
-                                                    pool_list=pool_list,
-                                                    fc_sizes=fc_sizes,
-                                                    dropout=dropout
-                                                    )
+        self.encoder = Encoder(input_shape=input_shape,
+                                kernel_size=kernel_size,
+                                channels_list=channels_list,
+                                pool_list=pool_list,
+                                fc_sizes=fc_sizes,
+                                dropout=dropout
+                                )
+        
+        self.linear = Linear(fc_sizes[-1], 6)
+
     @property
     def config(self):
         return {
@@ -222,3 +225,33 @@ class AlignmentRecognizer(Module):
             'fc_sizes': self.fc_sizes,
             'dropout': self.dropout
         }
+    
+    def forward(self, image):
+        encoded = self.encoder(image)
+        preds = self.linear(encoded)
+        return preds.view(-1, 6)
+    
+    def training_step(self, batch, optimizer, criterion):
+        self.train()
+        images, labels = batch
+        image = images[0]
+        labels = labels.view(-1, 6).float() # (batch_size, 6, 3, 3) -> (batch_size, 54)
+        out = self(image) # (batch_size, 6, 54)
+        loss = criterion(out, labels)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        preds = torch.round(out)
+        acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*6))
+        return {'loss': loss.detach(), 'acc': acc}
+    
+    def validation_step(self, batch, criterion):
+        self.eval()
+        images, labels = batch
+        image = images[0]
+        labels = labels.view(-1, 6).float()
+        out = self(image)
+        loss = criterion(out, labels)
+        preds = torch.round(out)
+        acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*6))
+        return {'val_loss': loss.detach(), 'val_acc': acc}

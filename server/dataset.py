@@ -13,17 +13,27 @@ class Dataset():
     Dataset class for the Rubik's Cube.
 
     """
-    def __init__(self, resolution=(96, 96)):
+    def __init__(self, resolution=(96, 96), model_type='color_recognition'):
         self.resolution = resolution
         self.masks = None
         self.backgrounds = None
+        self.type = model_type
+        if not os.path.exists(model_type):
+            os.mkdir(model_type)
+    
+    @property
+    def images_per_example(self):
+        if self.type == 'color_recognition':
+            return 2
+        elif self.type == 'pose_estimation':
+            return 1
 
     @property
     def size(self):
         """
         Returns the size of the dataset.
         """
-        files = [f for f in os.listdir('data') if f.endswith('.npy')]
+        files = [f for f in os.listdir(self.type) if f.endswith('.npy')]
         return len(files)
 
     @property
@@ -44,9 +54,12 @@ class Dataset():
             path: path to the masks
         """
         self.masks = []
-        for i in range(2):
-            with open(f'{path}/{i}.jpg', 'rb') as f:
-                self.masks.append(Image.open(f))
+        try:
+            for i in range(self.images_per_example):
+                with open(f'{path}/{i}.jpg', 'rb') as f:
+                    self.masks.append(Image.open(f))
+        except FileNotFoundError:
+            print(f'No masks found. Masks should be named 0.jpg, 1.jpg, and located in the specified folder {path}')
 
     def set_backgrounds(self, path):
         """
@@ -63,9 +76,9 @@ class Dataset():
         """
         example_num = self.size
         for i, image in enumerate(images):
-            image.save(f'data/{example_num}_{i}.jpg')
+            image.save(f'{self.type}/{example_num}_{i}.jpg')
 
-        with open(f'data/{example_num}.npy', 'wb') as f:
+        with open(f'{self.type}/{example_num}.npy', 'wb') as f:
             np.save(f, state)
 
     def _load_example(self, example_num):
@@ -77,10 +90,10 @@ class Dataset():
             state: numpy array of the cube state
         """
         images = []
-        for i in range(2):
-            images.append(Image.open(f'data/{example_num}_{i}.jpg'))
+        for i in range(self.images_per_example):
+            images.append(Image.open(f'{self.type}/{example_num}_{i}.jpg'))
 
-        with open(f'data/{example_num}.npy', 'rb') as f:
+        with open(f'{self.type}/{example_num}.npy', 'rb') as f:
             state = np.load(f)
 
         return images, state
@@ -205,4 +218,6 @@ class Dataset():
         images = self._augment(images, chance=0.5)
         images = [torch.tensor(np.array(img).transpose(2, 0, 1)).float() for img in images]
         state = torch.tensor(state).float()
+        if self.type == 'pose_estimation':
+            state = state.unsqueeze(0)
         return images, state

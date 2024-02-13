@@ -13,10 +13,12 @@ class Trainer():
         criterion='CrossEntropyLoss',
         device='cpu',
         batch_size=32,
+        epochs=10,
         shuffle=True,
         split=0.2,
         lr=0.001,
         wandb_project=None,
+        wandb_entity='leonardovaz',
         save_dir='models',
         *args,
         **kwargs
@@ -32,7 +34,9 @@ class Trainer():
         self.split = split
         self.lr = lr
         self.wandb_project = wandb_project
+        self.wandb_entity = wandb_entity
         self.save_dir = save_dir
+        self.epochs = epochs
         self.kwargs = kwargs
         self._init_loaders()
         self._init_model()
@@ -81,7 +85,7 @@ class Trainer():
                 'lr': self.lr
             }
             config.update(model_config)
-            wandb.init(project=self.wandb_project, entity='leonardopereira', config=config)
+            wandb.init(project=self.wandb_project, entity=self.wandb_entity, config=config)
             wandb.watch(self.model)
             self.run_name = wandb.run.name
             print(f'wandb initialized! Run name: {self.run_name}')
@@ -89,9 +93,12 @@ class Trainer():
             self.run_name = 'local'
 
     def train(self,
-        epochs=10,
+        epochs=None,
         save_model=True,
         ):
+        if epochs is None:
+            epochs = self.epochs
+            
         self._init_wandb()
         save_criteria_score = 0
         print('Initializing training...')
