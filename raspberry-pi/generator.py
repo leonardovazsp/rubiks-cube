@@ -56,7 +56,7 @@ class Generator():
             time.sleep(0.5)
 
     def save_picture(self, example_num):
-        subprocess.call(['rpicam-jpeg', '-o', self.save_dir + f'/{example_num}.jpg', '-t', '10', '--width', '480', '--height', '480', '-v', '0', '--camera', '1'])
+        subprocess.call(['rpicam-jpeg', '-o', self.save_dir + f'/{example_num}.jpg', '-t', '10', '--width', '480', '--height', '480', '-v', '0', '--camera', '0'])
 
     def save_moves(self, steps, example_num):
         np.save(self.save_dir + f'/{example_num}.npy', steps)
