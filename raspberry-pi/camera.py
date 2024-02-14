@@ -2,6 +2,31 @@ import subprocess
 from PIL import Image
 import os
 
+class Camera():
+    def __init__(self,
+                 resolution=(224, 224),
+                 camera_type='cv2'
+        ):
+        self.type = type
+        self.resolution = resolution
+        self.camera_type = camera_type
+        self._init_camera()
+
+    def _init_camera(self):
+        if self.camera_type == 'cv2':
+            import cv2
+            self.camera = cv2.VideoCapture(0)
+            self.camera.set(3, self.resolution[0])
+            self.camera.set(4, self.resolution[1])
+
+    def capture(self):
+        success, frame = self.camera.read()
+        if success:
+            return frame
+        else:
+            print('Failed to capture image')
+            return None
+
 class Cameras():
     """
     Camera class to capture images from both cameras.
@@ -13,10 +38,12 @@ class Cameras():
     def __init__(self,
                  resolution=(224, 224),
                  directory='images',
+                 camera_type='cv2'
         ):
         self.type = type
         self.resolution = resolution
         self.directory = directory
+        self.camera_type = camera_type
         if not os.path.exists(self.directory):
             os.makedirs(self.directory)
 

@@ -195,7 +195,7 @@ class PoseEstimator(Module):
                  kernel_size = 3,
                  channels_list = [3, 8, 16, 32, 64, 128, 256, 512, 1024],
                  pool_list = [True, True, False, False, False, False, True, True],
-                 fc_sizes = [1024, 2048, 1024, 27 * 6],
+                 fc_sizes = [1024, 2048, 1024],
                  dropout = 0.1):
         super().__init__()
         self.input_shape = input_shape
