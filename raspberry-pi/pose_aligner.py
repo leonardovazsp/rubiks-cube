@@ -11,7 +11,7 @@ class PoseAligner(PoseEstimator):
                  cube,
                  checkpoint_path,
                  device='cpu'):
-        super().__init__(fc_sizes = [1024, 2048, 1024, 27 * 6])
+        super().__init__(fc_sizes = [1024, 2048, 1024])
         self.cube = cube
         self.checkpoint_path = checkpoint_path
         self.device = device
@@ -29,23 +29,19 @@ class PoseAligner(PoseEstimator):
         image = self.camera.capture()
         image = torch.tensor(image).permute(2, 0, 1).unsqueeze(0) / 255
         estimated_pose = self(image)
-        estimated_pose = estimated_pose.long().squeeze().tolist()
-        return estimated_pose
+        estimated_pose = estimated_pose > 0.4
+        return estimated_pose.long().squeeze().tolist()
 
     def _move_cube(self, pose):
-        for i in range(6):
-            if pose[i] < 0:
-                move = cube.moves_list[i*2]
-
-            elif pose[i] > 0:
-                move = cube.moves_list[i*2 + 1]
-
-            else:
-                move = None
-                
-            if move:
-                cube.fine_move(move, steps=abs(pose[i]))
-            time.sleep(1)
+        print(f'Moves: {self.cube.moves_list}')
+        for i in range(12):
+            if pose[i] == 1:
+                if i%2 == 0:
+                    self.cube.fine_move(self.cube.moves_list[i+1], 1)
+                    print(f'Moving {self.cube.moves_list[i+1]}')
+                else:
+                    self.cube.fine_move(self.cube.moves_list[i-1], 1)
+                    print(f'Moving {self.cube.moves_list[i-1]}')
 
     def align(self):
         aligned = False
@@ -60,4 +56,6 @@ class PoseAligner(PoseEstimator):
 if __name__ == '__main__':
     from cube import Cube
     cube = Cube()
-    pose_aligner = PoseAligner(cube, 'PoseEstimator_exquisite-valentine-5_best.pth')
+    cube.driver.set_delay(900)
+    cube.driver.activate()
+    pose_aligner = PoseAligner(cube, 'PoseEstimator_radiant-dumpling-20_best.pth')

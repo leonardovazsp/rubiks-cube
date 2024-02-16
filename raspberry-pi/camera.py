@@ -1,31 +1,58 @@
 import subprocess
 from PIL import Image
 import os
+import cv2
+import threading
+import queue
+# import signal
+# import sys
 
 class Camera():
     def __init__(self,
                  resolution=(224, 224),
-                 camera_type='cv2'
+                 src=0,
         ):
-        self.type = type
         self.resolution = resolution
-        self.camera_type = camera_type
-        self._init_camera()
+        self.q = queue.Queue()
+        self.running = True
+        self.cap = self._init_camera(src)
+        self.thread = threading.Thread(target=self._reader)
+        self.thread.start()
+        
+    def __del__(self):
+        self.release()
 
-    def _init_camera(self):
-        if self.camera_type == 'cv2':
-            import cv2
-            self.camera = cv2.VideoCapture(0)
-            self.camera.set(3, self.resolution[0])
-            self.camera.set(4, self.resolution[1])
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.release()
+
+    def _init_camera(self, src):
+        cap = cv2.VideoCapture(src)
+        cap.set(3, self.resolution[0])
+        cap.set(4, self.resolution[1])
+        return cap
+
+    def _reader(self):
+        while self.running:
+            ret, frame = self.cap.read()
+            if not ret:
+                self.running = False
+                break
+            if not self.q.empty():
+                try:
+                    self.q.get_nowait()
+                except queue.Empty:
+                    pass
+            self.q.put(frame)
 
     def capture(self):
-        success, frame = self.camera.read()
-        if success:
-            return frame
-        else:
-            print('Failed to capture image')
+        if self.q.empty():
             return None
+        return self.q.get()
+
+    def release(self):
+        self.running = False
+        self.thread.join()
+        self.cap.release()
 
 class Cameras():
     """
