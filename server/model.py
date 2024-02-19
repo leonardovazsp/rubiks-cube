@@ -140,40 +140,49 @@ class ColorRecognizer(Module):
             'fc_sizes': self.fc_sizes,
             'dropout': self.dropout
         }
-
-    def _process_outputs(self, out1, out2):
-        # shape of out1 and out2: (batch_size, 27, 6)
-
-        # Stack the two outputs from each image
-        outputs = torch.stack([out1, out2], dim=1) # (batch_size, 54, 6)
-
-        # Reshape the outputs and transpose so that the value for each shape is in dimension 1
-        outputs = outputs.view(outputs.shape[0], 6, 54).permute(1, 0, 2) # (6, batch_size, 54)
-
-        # Adjust the order of the faces and permute the dimensions so that the batch size is the first dimension again
-        # Image 1 sees faces (0, 1, 4) and Image 2 sees faces (2, 3, 5)
-        # The output stack was (0, 1, 4, 2, 3, 5) and we want (0, 1, 2, 3, 4, 5)
-        outputs = outputs[[0, 1, 3, 4, 2, 5]].permute(1, 2, 0) # (batch_size, 54, 6)
-
-        # Reshape the outputs so that the last dimension is the 6 values for each face
-        outputs = outputs.reshape(-1, 6, 54) # (batch_size, 6, 54)
-        return outputs
     
     def forward(self, batch):
         images_1, images_2 = batch
         encoded_1 = self.encoder(images_1)
         encoded_2 = self.encoder(images_2)
         preds = self.linear(torch.cat([encoded_1, encoded_2], dim=1))
-        return preds.view(-1, 6, 54)
+        return preds.view(-1, 6, 3, 3, 6)
+    
+    def _get_one_hot_from_pred(self, preds):
+        preds = torch.argmax(preds, dim=-1)
+        identity = torch.eye(6).to(preds.device)
+        one_hot_state = identity[preds.long()]
+        return one_hot_state
+    
+    def _state_loss(self, preds):
+        # preds = torch.softmax(preds, dim=-1)
+        total_color_qty = torch.Tensor([[9, 9, 9, 9, 9, 9]]).to(preds.device)
+        total_color_state_qty = torch.sum(preds.reshape(-1, 6, 9, 6), dim=(2, 3))
+        mid_pieces_color_qty = torch.Tensor([4, 4, 4, 4, 4, 4]).to(preds.device)
+        mid_pieces_color_state_qty = torch.sum(preds.reshape(-1, 6, 9, 6)[:, :, [1, 3, 5, 7]], dim=(2, 3))
+        corner_pieces_color_qty = torch.Tensor([4, 4, 4, 4, 4, 4]).to(preds.device)
+        corner_pieces_color_state_qty = torch.sum(preds.reshape(-1, 6, 9, 6)[:, :, [0, 2, 6, 8]], dim=(2, 3))
+        loss = F.mse_loss(total_color_state_qty, total_color_qty) + \
+               F.mse_loss(mid_pieces_color_state_qty, mid_pieces_color_qty) + \
+               F.mse_loss(corner_pieces_color_state_qty, corner_pieces_color_qty)
+        
+        return loss
     
     def training_step(self, batch, optimizer, criterion):
         self.train()
         images, labels = batch
-        labels = labels.view(-1, 54).long() # (batch_size, 6, 3, 3) -> (batch_size, 54)
-        out = self(images) # (batch_size, 6, 54)
-        loss = criterion(out, labels)
+        # labels = labels.view(-1, 54).long() # (batch_size, 6, 3, 3) -> (batch_size, 54)
+        identity = torch.eye(6).to(labels.device)
+        # print(labels, identity.shape)
+        one_hot_labels = identity[labels.long()].permute(0, 4, 1, 2, 3).float() # (batch_size, 6, 3, 3) -> (batch_size, 6, 3, 3, 6)
+        out = self(images) # (batch_size, 6, 3, 3, 6)
+        state_loss = self._state_loss(out) 
+        out = out.permute(0, 4, 1, 2, 3) # (batch_size, 6, 3, 3, 6) -> (batch_size, 6, 6, 3, 3)
+        loss = criterion(out, one_hot_labels) + state_loss * 0.001
+        # state loss
         optimizer.zero_grad()
         loss.backward()
+        # state_loss.backward()
         optimizer.step()
         _, preds = torch.max(out, dim=1)
         acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*54))
@@ -182,9 +191,11 @@ class ColorRecognizer(Module):
     def validation_step(self, batch, criterion):
         self.eval()
         images, labels = batch
-        labels = labels.view(-1, 54).long() # (batch_size, 6, 3, 3) -> (batch_size, 54)
+        identity = torch.eye(6).to(labels.device)
+        one_hot_labels = identity[labels.long()].permute(0, 4, 1, 2, 3).float()
         out = self(images)
-        loss = criterion(out, labels)
+        out = out.permute(0, 4, 1, 2, 3)
+        loss = criterion(out, one_hot_labels)
         _, preds = torch.max(out, dim=1)
         acc = torch.tensor(torch.sum(preds == labels).item() / (len(preds)*54))
         return {'val_loss': loss.detach(), 'val_acc': acc}

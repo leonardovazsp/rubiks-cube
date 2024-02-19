@@ -1,9 +1,10 @@
-from torch.utils.data import DataLoader, random_split
-from dataset import Dataset
-import torch
-from tqdm import tqdm
 import os
 import wandb
+import torch
+import torch.optim.lr_scheduler as lr_schedulers
+from torch.utils.data import DataLoader, random_split
+from dataset import Dataset
+from tqdm import tqdm
 
 class Trainer():
     def __init__(self,
@@ -17,6 +18,8 @@ class Trainer():
         shuffle=True,
         split=0.2,
         lr=0.001,
+        scheduler=None,
+        lr_decay=None,
         wandb_project=None,
         wandb_entity='leonardovaz',
         save_dir='models',
@@ -33,6 +36,8 @@ class Trainer():
         self.shuffle = shuffle
         self.split = split
         self.lr = lr
+        self.scheduler = scheduler
+        self.lr_decay = lr_decay
         self.wandb_project = wandb_project
         self.wandb_entity = wandb_entity
         self.save_dir = save_dir
@@ -63,6 +68,9 @@ class Trainer():
         self.optimizer = getattr(torch.optim, self.optimizer)
         self.optimizer = self.optimizer(self.model.parameters(), lr=self.lr)
         self.criterion = getattr(torch.nn, self.criterion)()
+        if self.scheduler:
+            self.scheduler = getattr(lr_schedulers, self.scheduler)(self.optimizer, gamma=self.lr_decay)
+            
         self.model.to(self.device)
         self.model.train()
         self.model_name = self.model.__class__.__name__
@@ -113,8 +121,12 @@ class Trainer():
                 results = self.model.training_step(batch, self.optimizer, self.criterion)
                 running_loss += results['loss'].item()
                 acc_history.append(results['acc'])
+                if self.scheduler:
+                    self.scheduler.step()
+
                 if self.wandb_project:
                     wandb.log({'loss': results['loss'].item(), 'accuracy': results['acc']})
+
             print(f'Epoch {epoch + 1} - loss: {running_loss / len(self.train_loader)} - accuracy: {sum(acc_history) / len(acc_history)}')
 
             running_loss = 0.0
@@ -131,7 +143,9 @@ class Trainer():
                     wandb.log({'val_loss': results['val_loss'].item(), 'val_accuracy': results['val_acc']})
 
             print(f'Epoch {epoch + 1} - val_loss: {running_loss / len(self.val_loader)} - val_accuracy: {sum(acc_history) / len(acc_history)}')
-
+            if epoch % 10 == 0:
+                    print("Learning rate:", self.optimizer.param_groups[0]['lr'])
+                    
             acc = sum(acc_history) / len(acc_history)
             if save_model:
                 if acc > save_criteria_score:
