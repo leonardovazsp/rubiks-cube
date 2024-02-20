@@ -1,8 +1,5 @@
-import time
 import numpy as np
 import copy
-import pickle
-import inspect
 import random
 
 class Cube():
