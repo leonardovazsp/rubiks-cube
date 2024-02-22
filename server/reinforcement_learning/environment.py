@@ -2,6 +2,16 @@ import numpy as np
 import copy
 import random
 
+colors = {
+    0: "\033[91m",          # Red
+    1: "\033[94m",          # Blue
+    2: "\033[38;5;208m",    # Orange
+    3: "\033[92m",          # Green
+    4: "\033[97m",          # White
+    5: "\033[93m",          # Yellow
+    "reset": "\033[0m"  # Reset color
+}
+
 class Cube():
     def __init__(self, state=None):
         if state is None:
@@ -18,7 +28,8 @@ class Cube():
         return str(self.state)
     
     def __str__(self):
-        return str(self.state)
+        self.print_cube()
+        return ""
     
     def set_reward(self, reward):
         self.reward = reward
@@ -203,8 +214,34 @@ class Cube():
         self.state[4,2,:]=temp_state[1,:,0]
         self.state[0]=np.rot90(temp_state[0],1)
         return self.state
+    
+    def print_cube(self):
+   
+        # Print Upper part
+        for i in range(3):
+            print("                ", end="")
+            for j in range(3):
+                print(f"{colors[self.state[4, i, j]]}██{colors['reset']}", end="")
+            print()
+        print()
+        
+        # Print Middle part
+        for i in range(3):
+            for k in range(4):
+                for j in range(3):
+                    print(f"{colors[self.state[k, i, j]]}██{colors['reset']}", end="")
+                print("  ", end="")
+            print()
+        print()
+        
+        # Print Lower part
+        for i in range(3):
+            print("                ", end="")
+            for j in range(3):
+                print(f"{colors[self.state[5, i, j]]}██{colors['reset']}", end="")
+            print()
 
 if __name__ == '__main__':
     cube = Cube()
     cube.right()
-    print(cube.state)
+    print(cube)
