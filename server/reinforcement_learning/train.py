@@ -27,30 +27,32 @@ def main(
     device = "cuda:0",
     eval_device = "cuda:1",
     checkpoint = None,
-    warmup_steps = 1000,
+    warmup_steps = 100,
     reward = 1.0,
     verbose = False,
     wandb_token = None,
+    warmup_episodes = 10,
     project = "rubiks-cube-reinforcement-learning"
 ):
-    agent = Agent(
-        device=device,
-        batch_size=batch_size,
-        lr=learning_rate,
-        warmup_steps=warmup_steps,
-        gamma=gamma,
-        checkpoint=checkpoint,
-        reward=reward
-    )
-
+    
     evaluator = Evaluator(
         test_cubes_path='test_cubes.pkl',
         device=eval_device
     )
-    total_model_params = sum(p.numel() for p in agent.parameters() if p.requires_grad)
-    verbose_print(f"Total model parameters: {total_model_params}", verbose)
-
+    
     for episode in range(episodes):
+        agent = Agent(
+                    device=device,
+                    batch_size=batch_size,
+                    lr=learning_rate,
+                    warmup_steps=warmup_steps,
+                    gamma=gamma,
+                    checkpoint=checkpoint,
+                    reward=reward
+                )
+        
+        total_model_params = sum(p.numel() for p in agent.parameters() if p.requires_grad)
+
         if wandb_token:
             wandb_config = {"episode": episode + 1,
                             "batch_size": batch_size,
@@ -89,17 +91,15 @@ def main(
             if iteration % eval_every == 0 and iteration > 0:
                 agent.cpu()
                 state_dict = agent.state_dict().copy()
-                evaluator.add_model(state_dict)
+                evaluator.add_model((state_dict, episode + 1))
                 agent.to(device)
 
         pbar.close()
         queue.put("STOP")
         process.join()
 
-        wandb.finish()
-
-        best_model = 'models/' + run_name + '_best.pt'
-        agent.load_state_dict(torch.load(best_model))
+        if episode >= warmup_episodes:
+            checkpoint = f'{run_name}_episode_{episode + 1}_best.pt'
 
 if __name__ == '__main__':
     multiprocessing.set_start_method('spawn', force=True)

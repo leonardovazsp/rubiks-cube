@@ -1,3 +1,5 @@
+import os
+import json
 import copy
 import torch
 import wandb
@@ -12,6 +14,7 @@ class Evaluator():
         self.best_score = 0
         self.wandb = False
         self.run_name = "model"
+        self.keep_n_models = 5
 
     def evaluate(self, model, device):
         with open(f"{self.test_cubes_path}", "rb") as f:
@@ -63,24 +66,53 @@ class Evaluator():
         if self.wandb:
             wandb.init(project=self.project, id=self.run_id, resume='allow')
             model_name = wandb.run.name
+        else:
+            model_name = "model"
+
+        if os.path.exists("scores.json"):
+            with open("scores.json", "r") as f:
+                scores = json.load(f)
+
+        else:
+            scores = {}
+
+        if not scores.get(model_name):
+            scores[model_name] = {}
 
         while True:
             if self.queue.qsize() == 0:
                 continue
 
-            state_dict = self.queue.get()
-            if state_dict == "STOP":
+            queue_item = self.queue.get()
+            if queue_item == "STOP":
                 break
+
+            state_dict, episode = queue_item
+
+            if not scores[model_name].get(episode):
+                scores[model_name][episode] = 0
 
             model = ActorCritic()
             model.load_state_dict(state_dict)
             model.to(self.device)
             model.eval()
             output, score = self.evaluate(model, self.device)
+
+            max_scores = sorted(scores[model_name].items(), key=lambda x: x[1], reverse=True)[:self.keep_n_models]
+            models_saved = [x for x in os.listdir("models") if f"{model_name}_episode" in x]
+            for m in models_saved:
+                ep = int(m.split("_")[-2])
+                if ep not in [int(x[0]) for x in max_scores] and ep != episode:
+                    os.remove(f"models/{m}")
+
             torch.save(model.state_dict(), f"models/{model_name}_latest.pt")
-            if score > self.best_score:
-                self.best_score = score
-                torch.save(model.state_dict(), f"models/{model_name}_best.pt")
+            
+            if score > scores[model_name][episode]:
+                scores[model_name][episode] = score
+                torch.save(model.state_dict(), f"models/{model_name}_episode_{episode}_best.pt")
+            
+            with open("scores.json", "w") as f:
+                json.dump(scores, f)
 
             if self.wandb:
                 wandb.log({"score": score, "output": output})

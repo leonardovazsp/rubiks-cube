@@ -48,7 +48,8 @@ class Agent(ActorCritic):
 
     def _init_model(self):
         if self.checkpoint:
-            self.load_state_dict(torch.load(self.checkpoint))
+            self.load_state_dict(torch.load(f'models/{self.checkpoint}'))
+            
         self.to(self.device)
 
     def expand_state(self, cube):

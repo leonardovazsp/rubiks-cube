@@ -1,0 +1,1 @@
+python train.py --eval_every 10 --batch_size 512 --learning_rate 0.00001 --n_scrambles 16 --wandb_token "2536cf76c712751bbd4501d4bf72959c7fc7d2ce" --checkpoint brilliant-wish-123_best.pt
