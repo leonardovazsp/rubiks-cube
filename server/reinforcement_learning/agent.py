@@ -31,7 +31,8 @@ class Agent(ActorCritic):
                  lr=0.001,
                  warmup_steps=100,
                  gamma=0.9999,
-                 checkpoint=None):
+                 checkpoint=None,
+                 reward=1.0):
         
         super().__init__()
         self.device = device
@@ -42,11 +43,13 @@ class Agent(ActorCritic):
         self.optimizer = torch.optim.Adam(self.parameters(), lr=lr)
         self.scheduler = WarmupExponentialDecayLR(self.optimizer, warmup_steps=warmup_steps, gamma=gamma)
         self.checkpoint = checkpoint
+        self.reward = reward
         self._init_model()
 
     def _init_model(self):
         if self.checkpoint:
-            self.load_state_dict(torch.load(self.checkpoint))
+            self.load_state_dict(torch.load(f'models/{self.checkpoint}'))
+            
         self.to(self.device)
 
     def expand_state(self, cube):
@@ -59,6 +62,7 @@ class Agent(ActorCritic):
     
     def generate_examples(self, scrambles):
         cube = Cube()
+        cube.set_reward(self.reward)
         for i in range(self.batch_size // scrambles):
             cube.reset()
             for j in range(scrambles):
@@ -95,6 +99,7 @@ class Agent(ActorCritic):
         self.optimizer.zero_grad()
         loss.backward()
         self.optimizer.step()
+        self.scheduler.step()
         return loss.item()
     
 if __name__ == '__main__':

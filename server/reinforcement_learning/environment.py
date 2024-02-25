@@ -243,5 +243,5 @@ class Cube():
 
 if __name__ == '__main__':
     cube = Cube()
-    cube.right()
-    print(cube)
+    # cube.right()
+    # print(cube)
