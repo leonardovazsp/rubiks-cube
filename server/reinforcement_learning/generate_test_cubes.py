@@ -8,7 +8,7 @@ def get_scrambled_cubes(n_cubes, n_scrambles):
         for i in range(n_cubes):
             cube = Cube()
             cube.scramble(n_scrambles)
-            cubes.append(copy.deepcopy(cube))
+            cubes.append(copy.deepcopy(cube.state))
         return cubes
 
 def main(total_levels=20,
