@@ -100,6 +100,9 @@ def main(
 
         if episode >= warmup_episodes:
             checkpoint = f'{run_name}_episode_{episode + 1}_best.pt'
+        else:
+            print(f"Warmup episode {episode + 1} - loss: {loss:.4f}")
+            checkpoint = f'{run_name}_latest.pt'
 
 if __name__ == '__main__':
     multiprocessing.set_start_method('spawn', force=True)
