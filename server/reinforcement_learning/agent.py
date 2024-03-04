@@ -4,6 +4,7 @@ from collections import deque
 from torch.optim.lr_scheduler import _LRScheduler
 import torch
 import numpy as np
+import time
 
 class WarmupExponentialDecayLR(_LRScheduler):
     def __init__(self, optimizer, warmup_steps, gamma, last_epoch=-1):
@@ -33,11 +34,13 @@ class Agent(ActorCritic):
                  warmup_steps=100,
                  gamma=0.9999,
                  checkpoint=None,
-                 reward=1.0):
+                 reward=1.0,
+                 scrambles=32,
+                 shuffle=True):
         
         super().__init__()
         self.device = device
-        self.memory = deque(maxlen=batch_size)
+        self.memory = None
         self.batch_size = batch_size
         self.policy_loss = torch.nn.CrossEntropyLoss(reduction='none')
         self.value_loss = torch.nn.MSELoss(reduction='none')
@@ -45,6 +48,8 @@ class Agent(ActorCritic):
         self.scheduler = WarmupExponentialDecayLR(self.optimizer, warmup_steps=warmup_steps, gamma=gamma)
         self.checkpoint = checkpoint
         self.reward = reward
+        self.scrambles = scrambles
+        self.shuffle = shuffle
         self._init_model()
 
     def _init_model(self):
@@ -52,6 +57,9 @@ class Agent(ActorCritic):
             self.load_state_dict(torch.load(f'models/{self.checkpoint}'))
             
         self.to(self.device)
+
+    def set_memory(self, queue):
+        self.memory = queue
 
     def expand_state(self, cube):
         children_states, rewards = [], []
@@ -61,17 +69,30 @@ class Agent(ActorCritic):
             rewards.append(reward)
         return children_states, rewards
     
-    def generate_examples(self, scrambles):
-        cube = Cube()
-        cube.set_reward(self.reward)
-        for i in range(self.batch_size // scrambles):
-            cube.reset()
-            for j in range(scrambles):
-                cube.scramble(j)
-                children, rewards = self.expand_state(cube)
-                loss_discount = 1 / (j + 1)
-                solved = j == 0
-                self.memory.append({'state': cube.state, 'children': children, 'rewards': rewards, 'loss_discount': loss_discount, 'solved': solved})
+    def generate_examples(self):
+        count = 0
+        while True:
+            if self.memory.qsize() >= self.batch_size * 16:
+                time.sleep(1)
+                continue
+
+            cube = Cube()
+            cube.set_reward(self.reward)
+            batch = []
+            for i in range(self.batch_size // self.scrambles):
+                cube.reset()
+                for j in range(self.scrambles):
+                    cube.scramble(j)
+                    children, rewards = self.expand_state(cube)
+                    loss_discount = 1 / (j + 1)
+                    solved = j == 0
+                    batch.append({'state': cube.state, 'children': children, 'rewards': rewards, 'loss_discount': loss_discount, 'solved': solved})
+                    count += 1
+
+            if self.shuffle:
+                np.random.shuffle(batch)
+
+            self.memory.put(batch)
 
     def get_policy_value(self, children_states, rewards):
         self.eval()
@@ -84,12 +105,13 @@ class Agent(ActorCritic):
         return y_p.long(), y_v.float().unsqueeze(1)
 
     def train_step(self):
-        states = [m['state'] for m in self.memory] # (batch_size, 54)
-        children = [m['children'] for m in self.memory] # (batch_size, 12, 54)
-        rewards = [m['rewards'] for m in self.memory] # (batch_size, 12)
-        loss_discount = np.sqrt([m['loss_discount'] for m in self.memory])
+        memory = self.memory.get()
+        states = [m['state'] for m in memory] # (batch_size, 54)
+        children = [m['children'] for m in memory] # (batch_size, 12, 54)
+        rewards = [m['rewards'] for m in memory] # (batch_size, 12)
+        loss_discount = np.sqrt([m['loss_discount'] for m in memory])
+        solved = [m['solved'] for m in memory]
         loss_discount = torch.tensor(loss_discount).float().to(self.device)
-        solved = [m['solved'] for m in self.memory]
         solved = torch.tensor(solved).float().to(self.device)
         y_p, y_v = self.get_policy_value(children, rewards)
         y_v += solved.unsqueeze(-1)

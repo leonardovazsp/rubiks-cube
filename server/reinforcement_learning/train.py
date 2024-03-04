@@ -16,6 +16,14 @@ def verbose_print(text, verbose):
     if verbose:
         print(text)
 
+def start_processes(target, num_processes):
+    processes = []
+    for _ in range(num_processes):
+        process = Process(target=target)
+        process.start()
+        processes.append(process)
+    return processes
+
 def main(
     batch_size = 512,
     n_scrambles = 8,
@@ -50,7 +58,8 @@ def main(
                     gamma=gamma,
                     checkpoint=checkpoint,
                     reward=reward,
-                    optimizer=optimizer
+                    optimizer=optimizer,
+                    scrambles=n_scrambles
                 )
         
         total_model_params = sum(p.numel() for p in agent.parameters() if p.requires_grad)
@@ -80,10 +89,14 @@ def main(
         process = Process(target=evaluator.run)
         process.start()
 
+        memory = Queue()
+        agent.set_memory(memory)
+        processes = start_processes(target=agent.generate_examples, num_processes=12)
+
         pbar = tqdm(total=iterations)
 
         for iteration in range(iterations):
-            agent.generate_examples(n_scrambles)
+            # agent.generate_examples(n_scrambles)
             loss = agent.train_step()
             if wandb_token:
                 wandb.log({"loss": loss})
@@ -100,6 +113,8 @@ def main(
         pbar.close()
         queue.put("STOP")
         process.join()
+        for p in processes:
+            p.join()
 
         if episode >= warmup_episodes:
             checkpoint = f'{run_name}_episode_{episode + 1}_best.pt'
