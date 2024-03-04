@@ -24,6 +24,7 @@ def main(
     eval_every = 100,
     learning_rate = 0.0001,
     gamma = 0.9999,
+    optimizer = "Adam",
     device = "cuda:0",
     eval_device = "cuda:1",
     checkpoint = None,
@@ -48,13 +49,15 @@ def main(
                     warmup_steps=warmup_steps,
                     gamma=gamma,
                     checkpoint=checkpoint,
-                    reward=reward
+                    reward=reward,
+                    optimizer=optimizer
                 )
         
         total_model_params = sum(p.numel() for p in agent.parameters() if p.requires_grad)
 
         if wandb_token:
             wandb_config = {"episode": episode + 1,
+                            "optimizer": optimizer,
                             "batch_size": batch_size,
                             "n_scrambles": n_scrambles,
                             "lr_decay": gamma,

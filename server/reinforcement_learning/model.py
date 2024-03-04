@@ -8,8 +8,7 @@ class ActorCritic(nn.Module):
     def __init__(self):
         super(ActorCritic, self).__init__()
         self.embedding = nn.Embedding(6, 256)
-        self.fc1 = nn.Linear(256 * 54, 4096)
-        self.extra = nn.Linear(4096, 2048)
+        self.fc1 = nn.Linear(256 * 54, 2048)
         self.fc2 = nn.Linear(2048, 2048)
         self.fc3 = nn.Linear(2048, 1024)
         self.fc4 = nn.Linear(2048, 1024)
@@ -20,7 +19,6 @@ class ActorCritic(nn.Module):
         x = self.embedding(x)
         x = x.view(x.size(0), -1)
         x = F.relu(self.fc1(x))
-        x = F.relu(self.extra(x))
         x = F.relu(self.fc2(x))
         out1 = F.relu(self.fc3(x))
         out2 = F.relu(self.fc4(x))

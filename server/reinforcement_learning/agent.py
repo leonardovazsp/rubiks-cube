@@ -29,6 +29,7 @@ class Agent(ActorCritic):
                  device='cuda',
                  batch_size=32,
                  lr=0.001,
+                 optimizer='Adam',
                  warmup_steps=100,
                  gamma=0.9999,
                  checkpoint=None,
@@ -40,7 +41,7 @@ class Agent(ActorCritic):
         self.batch_size = batch_size
         self.policy_loss = torch.nn.CrossEntropyLoss(reduction='none')
         self.value_loss = torch.nn.MSELoss(reduction='none')
-        self.optimizer = torch.optim.Adam(self.parameters(), lr=lr)
+        self.optimizer = getattr(torch.optim, optimizer)(self.parameters(), lr=lr)
         self.scheduler = WarmupExponentialDecayLR(self.optimizer, warmup_steps=warmup_steps, gamma=gamma)
         self.checkpoint = checkpoint
         self.reward = reward
@@ -69,7 +70,8 @@ class Agent(ActorCritic):
                 cube.scramble(j)
                 children, rewards = self.expand_state(cube)
                 loss_discount = 1 / (j + 1)
-                self.memory.append({'state': cube.state, 'children': children, 'rewards': rewards, 'loss_discount': loss_discount})
+                solved = j == 0
+                self.memory.append({'state': cube.state, 'children': children, 'rewards': rewards, 'loss_discount': loss_discount, 'solved': solved})
 
     def get_policy_value(self, children_states, rewards):
         self.eval()
@@ -85,13 +87,16 @@ class Agent(ActorCritic):
         states = [m['state'] for m in self.memory] # (batch_size, 54)
         children = [m['children'] for m in self.memory] # (batch_size, 12, 54)
         rewards = [m['rewards'] for m in self.memory] # (batch_size, 12)
-        loss_discount = [m['loss_discount'] for m in self.memory]
+        loss_discount = np.sqrt([m['loss_discount'] for m in self.memory])
         loss_discount = torch.tensor(loss_discount).float().to(self.device)
+        solved = [m['solved'] for m in self.memory]
+        solved = torch.tensor(solved).float().to(self.device)
         y_p, y_v = self.get_policy_value(children, rewards)
+        y_v += solved.unsqueeze(-1)
         self.train()
         states = torch.tensor(np.array(states)).to(self.device)
         p, v = self(states)
-        loss_p = self.policy_loss(p, y_p)
+        loss_p = self.policy_loss(p, y_p) * (1 - solved)
         loss_v = self.value_loss(v, y_v)
         loss = loss_p + loss_v
         loss *= loss_discount
