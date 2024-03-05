@@ -69,9 +69,9 @@ class Agent(ActorCritic):
             rewards.append(reward)
         return children_states, rewards
     
-    def generate_examples(self):
+    def generate_examples(self, stop_signal):
         count = 0
-        while True:
+        while not stop_signal.value:
             if self.memory.qsize() >= self.batch_size * 16:
                 time.sleep(1)
                 continue
@@ -88,9 +88,6 @@ class Agent(ActorCritic):
                     solved = j == 0
                     batch.append({'state': cube.state, 'children': children, 'rewards': rewards, 'loss_discount': loss_discount, 'solved': solved})
                     count += 1
-
-            if self.shuffle:
-                np.random.shuffle(batch)
 
             self.memory.put(batch)
 
