@@ -79,6 +79,8 @@ class Evaluator():
         if not scores.get(model_name):
             scores[model_name] = {}
 
+        model = ActorCritic()
+
         while True:
             if self.queue.qsize() == 0:
                 continue
@@ -92,7 +94,7 @@ class Evaluator():
             if not scores[model_name].get(episode):
                 scores[model_name][episode] = 0
 
-            model = ActorCritic()
+            
             model.load_state_dict(state_dict)
             model.to(self.device)
             model.eval()

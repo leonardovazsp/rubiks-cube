@@ -100,14 +100,11 @@ def main(
 
         if episode >= warmup_episodes and checkpoint:
             if os.path.exists(f'models/{checkpoint}'):
-                agent.load_state_dict(torch.load(f'models/{checkpoint}'))
+                agent.load_state_dict(torch.load(f'models/{checkpoint}', map_location=device))
 
         pbar = tqdm(total=iterations)
 
         for iteration in range(iterations):
-            # agent.generate_examples(n_scrambles)
-            # torch.save(agent.state_dict(), f'models/{iteration}_latest.pt')
-            # time.sleep(2)
             loss = agent.train_step()
             if wandb_token:
                 wandb.log({"loss": loss})
@@ -121,11 +118,9 @@ def main(
                 evaluator.add_model((state_dict, episode + 1))
                 agent.to(device)
 
-        # stop_signal.value = True
         pbar.close()
         queue.put("STOP")
         process.join()
-        # stop_signal.value = False
 
         if episode >= warmup_episodes:
             checkpoint = f'{run_name}_episode_{episode + 1}_best.pt'

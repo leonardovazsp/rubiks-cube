@@ -54,7 +54,7 @@ class Agent(ActorCritic):
 
     def _init_model(self):
         if self.checkpoint:
-            self.load_state_dict(torch.load(f'models/{self.checkpoint}'))
+            self.load_state_dict(torch.load(f'models/{self.checkpoint}', map_location=self.device))
             
         self.to(self.device)
 
