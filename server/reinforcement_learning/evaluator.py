@@ -4,6 +4,8 @@ import copy
 import torch
 import wandb
 import pickle
+import numpy as np
+import pandas as pd
 from environment import Cube
 from model import ActorCritic
 
@@ -22,17 +24,23 @@ class Evaluator():
 
         num_cubes = len(test_cubes)
         output = {l: 0 for l in range(1, num_cubes + 1)}
+        table = []
         for level, cubes in test_cubes.items():
-            for cube in cubes:
-                cube = Cube(cube.state)
-                for i in range(level+1):
-                    move = model(torch.Tensor(cube.state).long().to(device).unsqueeze(0))[0].argmax().item()
+            # for cube in cubes:
+            cubes = [Cube(cube.state) for cube in cubes]
+            for i in range(level+1):
+                states = np.array([cube.state for cube in cubes])
+                policies, values = model(torch.Tensor(states).long().to(device))
+                table.append([level, i, values.mean().item(), policies.max(dim=1)[0].mean().item()])
+                moves = policies.argmax(dim=1).cpu().numpy()
+                for cube, move in zip(cubes, moves):
                     cube.step(move)
                     if cube.is_solved():
                         output[level] += 1
-                        break
+                        cubes.remove(cube)
+
         score = sum([output[l] * l for l in output]) / (len(test_cubes) * len(test_cubes[1]))
-        return output, score
+        return output, score, table
     
     def evaluate_level(self, model, device, level):
         with open(f"{self.test_cubes_path}", "rb") as f:
@@ -80,6 +88,9 @@ class Evaluator():
             scores[model_name] = {}
 
         model = ActorCritic()
+        df = pd.DataFrame(columns=["episode", "run", "level", "iteration", "mean-value", "max-policy"])
+        score_df = pd.DataFrame()
+        previous_episode = None
 
         while True:
             if self.queue.qsize() == 0:
@@ -90,6 +101,11 @@ class Evaluator():
                 break
 
             state_dict, episode = queue_item
+            if not previous_episode == episode:
+                run = 1
+                previous_episode = episode
+            else:
+                run += 1
 
             if not scores[model_name].get(episode):
                 scores[model_name][episode] = 0
@@ -98,7 +114,19 @@ class Evaluator():
             model.load_state_dict(state_dict)
             model.to(self.device)
             model.eval()
-            output, score = self.evaluate(model, self.device)
+            output, score, table = self.evaluate(model, self.device)
+            table = pd.DataFrame(table, columns=["level", "iteration", "mean-value", "max-policy"])
+            table["episode"] = episode
+            table["run"] = run
+            output_df = pd.DataFrame(output.items(), columns=["level", "solved"])
+            output_df["episode"] = episode
+            output_df["run"] = run
+            output_df["score"] = score
+            score_df = pd.concat([score_df, output_df])
+            score_df.to_csv(f"results/{model_name}_scores.csv", index=False)
+    
+            df = pd.concat([df, table])
+            df.to_csv(f"results/{model_name}.csv", index=False)
 
             max_scores = sorted(scores[model_name].items(), key=lambda x: x[1], reverse=True)[:self.keep_n_models]
             models_saved = [x for x in os.listdir("models") if f"{model_name}_episode" in x]
@@ -118,3 +146,5 @@ class Evaluator():
 
             if self.wandb:
                 wandb.log({"score": score, "output": output})
+                # columns = ["level", "iteration", "mean-value", "max-policy"]
+                # wandb.log({"table": wandb.Table(data=table, columns=columns)})
