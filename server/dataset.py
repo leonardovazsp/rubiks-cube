@@ -13,13 +13,17 @@ class Dataset():
     Dataset class for the Rubik's Cube.
 
     """
-    def __init__(self, resolution=(96, 96), model_type='color_recognition'):
+    def __init__(self, resolution=(96, 96), model_type='color_recognition', directory='data'):
         self.resolution = resolution
         self.masks = None
         self.backgrounds = None
         self.type = model_type
-        if not os.path.exists(model_type):
-            os.mkdir(model_type)
+        self.cache = {}
+        if not os.path.exists(directory):
+            os.mkdir(directory)
+        self.directory = directory
+        if not os.path.exists(os.path.join(directory, model_type)):
+            os.mkdir(os.path.join(directory, model_type))
     
     @property
     def images_per_example(self):
@@ -33,7 +37,7 @@ class Dataset():
         """
         Returns the size of the dataset.
         """
-        files = [f for f in os.listdir(self.type) if f.endswith('.npy')]
+        files = [f for f in os.listdir(os.path.join(self.directory, self.type)) if f.endswith('.npy')]
         return len(files)
 
     @property
@@ -76,9 +80,11 @@ class Dataset():
         """
         example_num = self.size
         for i, image in enumerate(images):
-            image.save(f'{self.type}/{example_num}_{i}.jpg')
+            image.save(os.path.join(self.directory, f'{self.type}/{example_num}_{i}.jpg'))
+            # image.save(f'{self.type}/{example_num}_{i}.jpg')
 
-        with open(f'{self.type}/{example_num}.npy', 'wb') as f:
+        # with open(f'{self.type}/{example_num}.npy', 'wb') as f:
+        with open(os.path.join(self.directory, f'{self.type}/{example_num}.npy'), 'wb') as f:
             np.save(f, state)
 
     def _load_example(self, example_num):
@@ -91,9 +97,11 @@ class Dataset():
         """
         images = []
         for i in range(self.images_per_example):
-            images.append(Image.open(f'{self.type}/{example_num}_{i}.jpg'))
+            images.append(Image.open(os.path.join(self.directory, f'{self.type}/{example_num}_{i}.jpg')))
+            # images.append(Image.open(f'/mnt/{self.type}/{example_num}_{i}.jpg'))
 
-        with open(f'{self.type}/{example_num}.npy', 'rb') as f:
+        # with open(f'/mnt/{self.type}/{example_num}.npy', 'rb') as f:
+        with open(os.path.join(self.directory, f'{self.type}/{example_num}.npy'), 'rb') as f:
             state = np.load(f)
 
         return images, state
@@ -211,6 +219,10 @@ class Dataset():
             images: list of 2 images
             state: numpy array of the cube state
         """
+        if idx in self.cache.keys():
+            print('Cache hit!')
+            return self.cache[idx]
+            
         if idx >= self.size:
             raise IndexError(f'Index {idx} out of range for dataset of size {self.size}')
         
@@ -220,4 +232,5 @@ class Dataset():
         state = torch.tensor(state).float()
         if self.type == 'pose_estimation':
             state = state.unsqueeze(0)
+        self.cache[idx] = (images, state)
         return images, state

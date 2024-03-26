@@ -1,10 +1,9 @@
-import os
-import wandb
-import torch
-import torch.optim.lr_scheduler as lr_schedulers
 from torch.utils.data import DataLoader, random_split
 from dataset import Dataset
+import torch
 from tqdm import tqdm
+import os
+import wandb
 
 class Trainer():
     def __init__(self,
@@ -18,8 +17,6 @@ class Trainer():
         shuffle=True,
         split=0.2,
         lr=0.001,
-        scheduler=None,
-        lr_decay=None,
         wandb_project=None,
         wandb_entity='leonardovaz',
         save_dir='models',
@@ -36,8 +33,6 @@ class Trainer():
         self.shuffle = shuffle
         self.split = split
         self.lr = lr
-        self.scheduler = scheduler
-        self.lr_decay = lr_decay
         self.wandb_project = wandb_project
         self.wandb_entity = wandb_entity
         self.save_dir = save_dir
@@ -68,9 +63,6 @@ class Trainer():
         self.optimizer = getattr(torch.optim, self.optimizer)
         self.optimizer = self.optimizer(self.model.parameters(), lr=self.lr)
         self.criterion = getattr(torch.nn, self.criterion)()
-        if self.scheduler:
-            self.scheduler = getattr(lr_schedulers, self.scheduler)(self.optimizer, gamma=self.lr_decay)
-            
         self.model.to(self.device)
         self.model.train()
         self.model_name = self.model.__class__.__name__
@@ -111,46 +103,54 @@ class Trainer():
         save_criteria_score = 0
         print('Initializing training...')
         for epoch in range(epochs):
-            running_loss = 0.0
-            acc_history = []
+            # running_loss = 0.0
+            # acc_history = []
+            history = []
             for i, batch in enumerate(tqdm(self.train_loader)):
                 images, state = batch
                 images = [x.to(self.device) for x in images]
                 state = state.to(self.device)
                 batch = [images, state]
                 results = self.model.training_step(batch, self.optimizer, self.criterion)
-                running_loss += results['loss'].item()
-                acc_history.append(results['acc'])
-                if self.scheduler:
-                    self.scheduler.step()
-
+                history.append(results)
+                # running_loss += results['loss'].item()
+                # acc_history.append(results['acc'])
                 if self.wandb_project:
-                    wandb.log({'loss': results['loss'].item(), 'accuracy': results['acc']})
+                    wandb.log(results)
+            print(f'Epoch {epoch + 1} - loss: {sum(h["loss"].item() for h in history) / len(history):.4f}' + \
+                                   f' - accuracy: {sum(h["acc"] for h in history) / len(history):.4}' + \
+                                   f' - precision: {sum(h["precision"] for h in history) / len(history):.4f}' + \
+                                   f' - recall: {sum(h["recall"] for h in history) / len(history):.4f}' + \
+                                   f' - f1: {sum(h["f1"] for h in history) / len(history):.4f}')
 
-            print(f'Epoch {epoch + 1} - loss: {running_loss / len(self.train_loader)} - accuracy: {sum(acc_history) / len(acc_history)}')
-
-            running_loss = 0.0
-            acc_history = []
+            # running_loss = 0.0
+            # acc_history = []
+            history = []
             for i, batch in enumerate(tqdm(self.val_loader)):
                 images, state = batch
                 images = [x.to(self.device) for x in images]
                 state = state.to(self.device)
                 batch = [images, state]
                 results = self.model.validation_step(batch, self.criterion)
-                running_loss += results['val_loss'].item()
-                acc_history.append(results['val_acc'])
+                history.append(results)
+                # running_loss += results['val_loss'].item()
+                # acc_history.append(results['val_acc'])
                 if self.wandb_project:
-                    wandb.log({'val_loss': results['val_loss'].item(), 'val_accuracy': results['val_acc']})
+                    wandb.log(results)
 
-            print(f'Epoch {epoch + 1} - val_loss: {running_loss / len(self.val_loader)} - val_accuracy: {sum(acc_history) / len(acc_history)}')
-            if epoch % 10 == 0:
-                    print("Learning rate:", self.optimizer.param_groups[0]['lr'])
-                    
-            acc = sum(acc_history) / len(acc_history)
+            print(f'Epoch {epoch + 1} - val_loss: {sum(h["val_loss"].item() for h in history) / len(history):.4f}' + \
+                                   f' - val_accuracy: {sum(h["val_acc"] for h in history) / len(history):.4}' + \
+                                   f' - val_precision: {sum(h["val_precision"] for h in history) / len(history):.4f}' + \
+                                   f' - val_recall: {sum(h["val_recall"] for h in history) / len(history):.4f}' + \
+                                   f' - val_f1: {sum(h["val_f1"] for h in history) / len(history):.4f}')
+
+            f1 = sum(h["val_f1"] for h in history) / len(history)
             if save_model:
-                if acc > save_criteria_score:
+                if f1 > save_criteria_score:
                     torch.save(self.model.state_dict(), f'{self.save_dir}/{self.model_name}_{self.run_name}_best.pth')
-                    save_criteria_score = acc
+                    save_criteria_score = f1
+                    if self.wandb_project:
+                        wandb.run.summary['best_f1'] = f1
 
         if save_model:
             torch.save(self.model.state_dict(), f'{self.save_dir}/{self.model_name}_{self.run_name}_latest.pth')
