@@ -239,19 +239,17 @@ class PoseEstimator(Module):
     
     def _prepare_labels(self, labels):
         labels = labels.view(-1, 6)
+        labels = labels * (torch.softmax(torch.abs(labels), dim=1)>0.3)
         final_labels = []
         for label in labels:
             out = []
             for i in range(6):
-                if label[i] > 2:
-                    out.append(1)
-                    out.append(0)
-                elif label[i] < -2:
-                    out.append(0)
-                    out.append(1)
+                if label[i] > 1:
+                    out.extend([1, 0])
+                elif label[i] < -1:
+                    out.extend([0, 1])
                 else:
-                    out.append(0)
-                    out.append(0)
+                    out.extend([0, 0])
             final_labels.append(out)
         return torch.tensor(final_labels).float().to(labels.device)
 

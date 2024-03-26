@@ -17,8 +17,8 @@ train_params = {
     'lr_decay': 0.9995,
     'criterion': 'CrossEntropyLoss',
     'device': 'cuda',
-    'wandb_project': 'rubiks-cube-pose-estimation',
-    'wandb_entity': 'leonardopereira',
+    # 'wandb_project': 'rubiks-cube-pose-estimation',
+    # 'wandb_entity': 'leonardopereira',
     'save_dir': 'models'
 }
 
