@@ -220,7 +220,6 @@ class Dataset():
             state: numpy array of the cube state
         """
         if idx in self.cache.keys():
-            print('Cache hit!')
             return self.cache[idx]
             
         if idx >= self.size:
