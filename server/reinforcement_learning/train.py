@@ -89,15 +89,22 @@ def main(
     memory = Queue()
     agent.set_memory(memory)
     stop_signal = Value(ctypes.c_bool, False)
-    processes = start_processes(target=agent.generate_examples, num_processes=12, stop_signal=stop_signal)
+    processes = start_processes(target=agent.generate_examples, num_processes=2, stop_signal=stop_signal)
 
-    for layer in agent.parameters():
-        torch.nn.init.normal_(layer, mean=0.0, std=0.05)
+    time.sleep(5)
+    process = Process(target=evaluator.run)
+    process.start()
+
+    def init_weights(layer):
+        if type(layer) == torch.nn.Linear:
+            torch.nn.init.kaiming_normal_(layer.weight, nonlinearity='relu')
+            torch.nn.init.constant_(layer.bias, 0)
+
+    print(f"Total model parameters: {total_model_params}. Initializing weights...")
+    agent.apply(init_weights)
+    print("Weights initialized!")
     
     for episode in range(episodes):
-        process = Process(target=evaluator.run)
-        process.start()
-
         if episode >= warmup_episodes and checkpoint:
             if os.path.exists(f'models/{checkpoint}'):
                 agent.load_state_dict(torch.load(f'models/{checkpoint}', map_location=device))
@@ -119,14 +126,18 @@ def main(
                 agent.to(device)
 
         pbar.close()
-        queue.put("STOP")
-        process.join()
+        
 
         if episode >= warmup_episodes:
             checkpoint = f'{run_name}_episode_{episode + 1}_best.pt'
         else:
-            print(f"Warmup episode {episode + 1} - loss: {loss:.4f}")
+            print(f"Warmup episode")
             checkpoint = f'{run_name}_latest.pt'
+
+        print(f"Learning rate: {agent.scheduler.get_last_lr()}")
+
+    queue.put("STOP")
+    process.join()
 
 if __name__ == '__main__':
     import time
