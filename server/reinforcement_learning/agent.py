@@ -25,17 +25,16 @@ class WarmupExponentialDecayLR(_LRScheduler):
 
         return [base_lr * scale_factor for base_lr in self.base_lrs]
 
-class Agent(ActorCritic):
+class Model(ActorCritic):
     def __init__(self,
                  device='cuda',
                  batch_size=32,
                  lr=0.001,
                  optimizer='Adam',
+                 weight_decay=0.0001,
                  warmup_steps=100,
                  gamma=0.9999,
                  checkpoint=None,
-                 reward=1.0,
-                 scrambles=32,
                  shuffle=True):
         
         super().__init__()
@@ -44,11 +43,9 @@ class Agent(ActorCritic):
         self.batch_size = batch_size
         self.policy_loss = torch.nn.CrossEntropyLoss(reduction='none')
         self.value_loss = torch.nn.MSELoss(reduction='none')
-        self.optimizer = getattr(torch.optim, optimizer)(self.parameters(), lr=lr)
+        self.optimizer = getattr(torch.optim, optimizer)(self.parameters(), lr=lr, weight_decay=weight_decay)
         self.scheduler = WarmupExponentialDecayLR(self.optimizer, warmup_steps=warmup_steps, gamma=gamma)
         self.checkpoint = checkpoint
-        self.reward = reward
-        self.scrambles = scrambles
         self.shuffle = shuffle
         self._init_model()
 
@@ -60,36 +57,6 @@ class Agent(ActorCritic):
 
     def set_memory(self, queue):
         self.memory = queue
-
-    def expand_state(self, cube):
-        children_states, rewards = [], []
-        for move in range(12):
-            next_state, reward = cube.get_next_state(move)
-            children_states.append(next_state)
-            rewards.append(reward)
-        return children_states, rewards
-    
-    def generate_examples(self, stop_signal):
-        count = 0
-        while not stop_signal.value:
-            if self.memory.qsize() >= self.batch_size * 16:
-                time.sleep(1)
-                continue
-
-            cube = Cube()
-            cube.set_reward(self.reward)
-            batch = []
-            for i in range(self.batch_size // self.scrambles):
-                cube.reset()
-                for j in range(self.scrambles):
-                    cube.scramble(j)
-                    children, rewards = self.expand_state(cube)
-                    loss_discount = 1 / (j + 1)
-                    solved = j == 0
-                    batch.append({'state': cube.state, 'children': children, 'rewards': rewards, 'loss_discount': loss_discount, 'solved': solved})
-                    count += 1
-
-            self.memory.put(batch)
 
     def get_policy_value(self, children_states, rewards):
         self.eval()
@@ -106,16 +73,21 @@ class Agent(ActorCritic):
         states = [m['state'] for m in memory] # (batch_size, 54)
         children = [m['children'] for m in memory] # (batch_size, 12, 54)
         rewards = [m['rewards'] for m in memory] # (batch_size, 12)
-        loss_discount = np.sqrt([m['loss_discount'] for m in memory])
+        loss_discount = [m['loss_discount'] for m in memory]
         solved = [m['solved'] for m in memory]
         loss_discount = torch.tensor(loss_discount).float().to(self.device)
         solved = torch.tensor(solved).float().to(self.device)
         y_p, y_v = self.get_policy_value(children, rewards)
-        y_v += solved.unsqueeze(-1)
+        # y_v += solved.unsqueeze(-1) * self.reward
+        # print(y_v.view(-1, self.scrambles))
+        # for i in range(5):
+        #     print(f"Value: {y_v[i].item()}:")
+        #     print(Cube(np.array(states[i])))
+        # time.sleep(5)
         self.train()
         states = torch.tensor(np.array(states)).to(self.device)
         p, v = self(states)
-        loss_p = self.policy_loss(p, y_p) * (1 - solved)
+        loss_p = self.policy_loss(p, y_p)# * (1 - solved)
         loss_v = self.value_loss(v, y_v)
         loss = loss_p + loss_v
         loss *= loss_discount
@@ -125,6 +97,48 @@ class Agent(ActorCritic):
         self.optimizer.step()
         self.scheduler.step()
         return loss.item()
+
+class Agent():
+    def __init__(self,
+                 memory,
+                 batch_size,
+                 reward,
+                 scrambles):
+        self.memory = memory
+        self.batch_size = batch_size
+        self.reward = reward
+        self.scrambles = scrambles
+
+    def expand_state(self, cube):
+        children_states, rewards = [], []
+        for move in range(12):
+            next_state, reward = cube.get_next_state(move)
+            children_states.append(next_state)
+            rewards.append(reward)
+        return children_states, rewards
+
+    def generate_examples(self, stop_signal):
+        count = 0
+        while not stop_signal.value:
+            if self.memory.qsize() >= self.batch_size * 16:
+                time.sleep(1)
+                continue
+
+            batch = []
+            for i in range(self.batch_size // self.scrambles):
+                cube = Cube()
+                cube.set_reward(self.reward)
+                for j in range(1, self.scrambles):
+                    cube.scramble(j)
+                    children, rewards = self.expand_state(cube)
+                    loss_discount = 1 / (j + 1)
+                    solved = j == 0
+                    batch.append({'state': cube.state, 'children': children, 'rewards': rewards, 'loss_discount': loss_discount, 'solved': solved})
+                    count += 1
+
+            self.memory.put(batch)
+
+    
     
 if __name__ == '__main__':
     agent = Agent(device='cuda', batch_size=8, lr=0.001, warmup_steps=100, gamma=0.9999)
