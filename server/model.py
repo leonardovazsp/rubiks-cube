@@ -239,14 +239,14 @@ class PoseEstimator(Module):
     
     def _prepare_labels(self, labels):
         labels = labels.view(-1, 6)
-        labels = labels * (torch.softmax(torch.abs(labels), dim=1)>0.3)
+        # labels = labels * (torch.softmax(torch.abs(labels), dim=1)>0.3)
         final_labels = []
         for label in labels:
             out = []
             for i in range(6):
-                if label[i] > 1:
+                if label[i] > 0:
                     out.extend([1, 0])
-                elif label[i] < -1:
+                elif label[i] < 0:
                     out.extend([0, 1])
                 else:
                     out.extend([0, 0])
@@ -264,6 +264,7 @@ class PoseEstimator(Module):
     def forward(self, image):
         encoded = self.encoder(image)
         preds = self.linear(encoded)
+        return preds.view(-1, 12)
         return torch.sigmoid(preds.view(-1, 12))
     
     def training_step(self, batch, optimizer, criterion):
