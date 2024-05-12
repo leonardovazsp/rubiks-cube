@@ -1,0 +1,824 @@
+1. Experiment: max_number_scrambles=1
+
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6716.602 16527.981501        48600           1       25.981    9.846352          30              143
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8412.168 18092.911588        48600           1       24.971   10.778504          30              179
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7296.92 17054.399175        48600           1       25.636   10.158322          30              156
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8340.844 18001.502704        48600           1       25.014   10.722957          30              178
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8198.196 17939.880533        48600           1       25.098    10.68833          30              174
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7115.368 16889.041473        48600           1       25.744   10.060142          30              152
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7724.864 17457.601361        48600           1       25.381   10.398742          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8334.36 17987.578991        48600           1       25.018   10.714368          30              178
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7880.48 17616.444502        48600           1       25.288   10.494049          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      6810.62 16622.293926        48600           1       25.925    9.902493          30              145
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8791.482 18406.784122        48600           1       24.745   10.965581          30              187
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8729.884 18338.717959        48600           1       24.782   10.924398          30              186
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8279.246 17930.350177        48600           1       25.051   10.679906          30              177
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7309.888 17084.541477        48600           1       25.628   10.176916          30              156
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6739.296 16515.836268        48600           1       25.968    9.837834          30              144
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8068.516 17719.241681        48600           1       25.177   10.553088          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7595.184 17291.168629        48600           1       25.459   10.297879          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7358.518 17132.722843        48600           1       25.599   10.205694          30              157
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7754.042 17459.968209        48600           1       25.364   10.399303          30              166
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8269.52 17970.85957        48600           1       25.056    10.70574          30              176
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8879.016 18408.307815        48600           1       24.694    10.96414          30              190
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7938.836 17683.092475        48600           1       25.253   10.534277          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8661.802 18256.588045        48600           1       24.823   10.874542          30              185
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8480.25 18176.716157        48600           1        24.93   10.829363          30              180
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7964.772 17615.383655        48600           1       25.239   10.490752          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7971.256 17629.737258        48600           1       25.235   10.499608          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8246.826 17921.895346        48600           1        25.07   10.675537          30              176
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8759.062 18339.372181        48600           1       24.765      10.924          30              187
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7773.494 17503.603036        48600           1       25.352   10.426222          30              166
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8107.42 17804.42527        48600           1       25.153    10.60564          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8253.31 17935.901694        48600           1       25.066   10.684177          30              176
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7880.48 17616.444502        48600           1       25.288   10.494049          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7095.916 16843.054615        48600           1       25.756   10.031773          30              152
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8431.62 18073.357655        48600           1        24.96   10.765612          30              180
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7254.774 17020.960358        48600           1       25.661   10.138643          30              155
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8506.186 18049.035692        48600           1       24.917   10.748121          30              183
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8055.548 17753.010835        48600           1       25.184   10.574788          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8768.788 18359.627764        48600           1       24.759   10.936495          30              187
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7925.868 17654.434163        48600           1       25.261     10.5166          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8788.24 18339.979959        48600           1       24.748   10.923575          30              188
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7695.686 17455.185419        48600           1       25.398   10.398153          30              164
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7799.43 17498.62555        48600           1       25.337   10.422257          30              167
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8632.624 18255.775407        48600           1        24.84   10.874852          30              184
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8207.922 17837.576805        48600           1       25.094   10.623519          30              176
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8331.118 17980.612214        48600           1        25.02    10.71007          30              178
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7676.234 17411.342326        48600           1        25.41   10.371109          30              164
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      6907.88 16723.94428        48600           1       25.867    9.963198          30              147
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7403.906 17173.162271        48600           1       25.572   10.229703          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7559.522 17273.721311        48600           1        25.48   10.288032          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8716.916 18371.815304        48600           1       24.789   10.945615          30              185
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7251.532 17013.392052        48600           1       25.663   10.133974          30              155
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7348.792 17110.213318        48600           1       25.605   10.191809          30              157
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7705.412 17413.796944        48600           1       25.393   10.371719          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7614.636 17398.952284        48600           1       25.446   10.365283          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8376.506 18016.698844        48600           1       24.993   10.731493          30              179
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8169.018 17876.671099        48600           1       25.116   10.649345          30              174
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7413.632 17195.55822        48600           1       25.566   10.243517          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7390.938 17078.749841        48600           1       25.581   10.170518          30              159
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6580.438 16327.414654        48600           1       26.063    9.724661          30              141
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     9102.714 18569.476138        48600           1       24.561   11.059669          30              195
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7767.01 17489.072594        48600           1       25.356   10.417258          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7556.28 17266.321019        48600           1       25.482   10.283466          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8081.484 17809.765814        48600           1       25.168   10.609796          30              172
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7413.632 17195.55822        48600           1       25.566   10.243517          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7660.024 17438.107741        48600           1       25.419   10.388524          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7134.82 16869.587423        48600           1       25.733   10.047174          30              153
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6661.488 16459.626018        48600           1       26.014    9.805193          30              142
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8528.88 18158.210179        48600           1       24.902   10.816302          30              182
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7125.094 16911.97962        48600           1       25.738   10.074292          30              152
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7459.02 17171.555299        48600           1        25.54   10.226847          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7566.006 17288.510568        48600           1       25.476   10.297156          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8489.976 18075.601137        48600           1       24.926   10.765339          30              182
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8736.368 18292.001816        48600           1       24.779   10.894777          30              187
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6846.282 16642.029164        48600           1       25.904    9.913667          30              146
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7737.832 17486.731324        48600           1       25.373   10.416711          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7387.696 17135.758374        48600           1       25.582   10.206629          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7689.202 17440.585711        48600           1       25.402   10.389148          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7455.778 17164.091975        48600           1       25.542   10.222242          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7287.194 17096.425336        48600           1       25.641   10.185191          30              155
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30       7750.8 17515.803241        48600           1       25.365   10.434643          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7274.226 17066.286779        48600           1       25.649   10.166602          30              155
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7381.212 17120.769638        48600           1       25.586   10.197382          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8276.004 17923.351186        48600           1       25.053   10.675589          30              177
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8052.306 17745.901035        48600           1       25.186   10.570402          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8026.37 17751.178661        48600           1       25.201   10.574526          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8029.612 17758.291083        48600           1       25.199   10.578913          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7682.718 17425.971359        48600           1       25.406   10.380133          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7916.142 17632.903604        48600           1       25.267   10.503319          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8464.04 18081.410331        48600           1       24.941    10.76975          30              181
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7848.06 17544.312976        48600           1       25.308   10.449552          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7890.206 17638.014818        48600           1       25.282   10.507353          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8188.47 17918.840776        48600           1       25.104   10.675354          30              174
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8019.886 17674.613027        48600           1       25.206   10.526422          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7841.576 17592.687235        48600           1       25.311    10.48028          30              167
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7199.66 16956.961709        48600           1       25.694   10.100117          30              154
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8143.082 17820.256607        48600           1       25.132   10.614545          30              174
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8130.114 17853.88886        48600           1       25.139    10.63615          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7922.626 17647.260825        48600           1       25.263   10.512175          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7731.348 17472.173617        48600           1       25.377   10.407731          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8522.396 18144.473917        48600           1       24.906   10.807829          30              182
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30       8075.0 17733.473289        48600           1       25.173   10.561869          30              173
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6839.798  16626.3842        48600           1       25.908    9.904016          30              146
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7611.394 17328.042968        48600           1       25.449    10.32063          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7180.208 16976.389929        48600           1       25.705    10.11306          30              153
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6784.684 16559.479717        48600           1       25.941    9.863748          30              145
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8136.598 17806.119154        48600           1       25.136   10.605824          30              174
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7692.444 17384.520588        48600           1       25.401   10.353656          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7381.212 17120.769638        48600           1       25.586   10.197382          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7387.696 17135.758374        48600           1       25.582   10.206629          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8875.774 18461.472429        48600           1       24.695   10.997726          30              189
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8032.854 17703.169803        48600           1       25.198   10.544041          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7507.65 17219.072023        48600           1       25.511   10.255237          30              161
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7909.658 17555.781438        48600           1       25.272   10.454856          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8110.662 17811.501677        48600           1       25.151   10.610005          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6849.524 16583.429268        48600           1       25.903    9.876517          30              147
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7961.53 17670.766282        48600           1        25.24   10.525797          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7138.062 16942.506822        48600           1        25.73   10.093121          30              152
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7711.896 17428.413062        48600           1       25.389   10.380736          30              165
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8256.552 17881.28737        48600           1       25.065   10.649637          30              177
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8431.62 18073.357655        48600           1        24.96   10.765612          30              180
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8447.83 18046.841324        48600           1       24.951   10.748423          30              181
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7838.334 17522.603921        48600           1       25.314   10.436158          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8626.14 18242.149486        48600           1       24.844   10.866447          30              184
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8055.548 17753.010835        48600           1       25.184   10.574788          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7825.366 17556.581276        48600           1       25.321   10.458009          30              167
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7848.06 17607.104709        48600           1       25.307   10.489173          30              167
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7799.43 17561.58064        48600           1       25.336   10.461984          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7420.116 17210.469609        48600           1       25.562   10.252715          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7086.19 16820.005601        48600           1       25.762   10.017552          30              152
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8379.748 18084.771044        48600           1        24.99   10.774317          30              178
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7718.38 17443.014522        48600           1       25.385   10.389744          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8136.598 17867.990871        48600           1       25.135   10.644847          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8853.08 18474.394129        48600           1       24.708   11.006486          30              188
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8100.936 17728.119247        48600           1       25.158     10.5577          30              174
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8969.792 18535.572993        48600           1       24.639    11.04186          30              191
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7890.206 17575.333518        48600           1       25.283   10.467804          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8308.424 17993.192295        48600           1       25.033   10.718671          30              177
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7407.148 17180.631443        48600           1        25.57    10.23431          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7193.176 16941.742823        48600           1       25.698   10.090728          30              154
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7604.91 17313.304478        48600           1       25.453   10.311537          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7617.878 17342.766509        48600           1       25.445   10.329713          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8729.884 18338.717959        48600           1       24.782   10.924398          30              186
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7332.582 17072.619181        48600           1       25.615   10.168617          30              157
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8593.72 18173.831939        48600           1       24.864   10.824302          30              184
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8856.322 18421.270802        48600           1       24.707   10.972928          30              189
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6937.058 16661.735033        48600           1       25.851    9.922842          30              149
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7407.148 17180.631443        48600           1        25.57    10.23431          30              158
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8204.68 17892.31574        48600           1       25.095   10.658141          30              175
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7744.316 17501.27452        48600           1       25.369   10.425682          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7672.992 17404.022292        48600           1       25.412   10.366593          30              164
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8130.114 17853.88886        48600           1       25.139    10.63615          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7685.96 17433.280368        48600           1       25.404   10.384642          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7439.568 17126.717365        48600           1       25.552   10.199181          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7864.27 17580.423206        48600           1       25.298   10.471829          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8739.61 18298.778242        48600           1       24.777   10.898957          30              187
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8522.396 18144.473917        48600           1       24.906   10.807829          30              182
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7776.736 17510.862835        48600           1        25.35     10.4307          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7410.39 17188.096758        48600           1       25.568   10.238915          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8214.406 17913.377851        48600           1       25.089   10.671133          30              175
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7339.066 17087.668606        48600           1       25.611   10.177902          30              157
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8217.648 17920.39188        48600           1       25.087   10.675459          30              175
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8713.674 18304.870316        48600           1       24.792   10.903519          30              186
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7786.462 17532.620599        48600           1       25.344   10.444121          30              166
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8483.492 18122.78696        48600           1       24.929   10.795275          30              181
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8143.082 17758.218579        48600           1       25.133   10.575411          30              175
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8039.338 17717.427371        48600           1       25.194   10.552837          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7293.678 17046.853731        48600           1       25.638   10.153667          30              156
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7802.672 17505.88261        48600           1       25.335   10.426734          30              167
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8146.324 17889.118636        48600           1       25.129   10.657878          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6933.816 16720.077461        48600           1       25.852    9.959824          30              148
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8107.42 17742.331886        48600           1       25.154    10.56647          30              174
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7980.982 17713.654007        48600           1       25.228   10.552252          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7724.864 17457.601361        48600           1       25.381   10.398742          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8045.822 17731.671104        48600           1        25.19   10.561624          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7517.376 17305.240879        48600           1       25.504   10.309315          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7407.148 17180.631443        48600           1        25.57    10.23431          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30       7750.8 17515.803241        48600           1       25.365   10.434643          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7857.786 17565.989817        48600           1       25.302   10.462925          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6998.656 16809.004345        48600           1       25.813   10.013692          30              149
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8049.064 17800.893539        48600           1       25.187   10.605189          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7685.96 17369.860275        48600           1       25.405   10.344611          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8502.944 18164.048504        48600           1       24.917   10.820726          30              181
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7507.65 17283.045443        48600           1        25.51   10.295625          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6671.214 16483.429567        48600           1       26.008    9.819875          30              142
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8382.99 18030.584913        48600           1       24.989    10.74006          30              179
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7650.298 17416.161296        48600           1       25.425   10.374988          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7514.134 17297.846172        48600           1       25.506   10.304754          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7640.572 17394.181722        48600           1       25.431    10.36143          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8921.162 18495.284376        48600           1       24.668   11.017794          30              190
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7958.288 17725.975281        48600           1       25.241   10.560725          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7786.462 17532.620599        48600           1       25.344   10.444121          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7929.11 17661.603994        48600           1       25.259   10.521023          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7468.746 17193.922166        48600           1       25.534   10.240647          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7695.686 17455.185419        48600           1       25.398   10.398153          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8201.438 17885.288349        48600           1       25.097   10.653806          30              175
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7796.188 17554.346007        48600           1       25.338   10.457522          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8412.168 18031.811647        48600           1       24.972   10.739982          30              180
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7154.272 16915.45741        48600           1       25.721   10.075473          30              153
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7760.526 17474.527664        48600           1        25.36   10.408285          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7099.158 16850.729366        48600           1       25.754   10.036508          30              152
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7637.33 17386.847814        48600           1       25.433   10.356906          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7955.046 17656.442462        48600           1       25.244   10.516961          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8227.374 17879.796361        48600           1       25.082   10.649567          30              176
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8006.918 17708.431674        48600           1       25.213   10.548158          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     9375.042 18824.046742        48600           1       24.398   11.212921          30              200
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8502.944 18164.048504        48600           1       24.917   10.820726          30              181
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8305.182 17986.223017        48600           1       25.035   10.714372          30              177
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8525.638 18151.343637        48600           1       24.904   10.812067          30              182
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7776.736 17510.862835        48600           1        25.35     10.4307          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7870.754 17594.842366        48600           1       25.294   10.480723          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7951.804 17649.275299        48600           1       25.246   10.512539          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8016.644 17729.820718        48600           1       25.207   10.561352          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7481.714 17223.690929        48600           1       25.526   10.259012          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8126.872 17846.832793        48600           1       25.141   10.631798          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7488.198 17238.552375        48600           1       25.522    10.26818          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7974.498 17699.372021        48600           1       25.232   10.543442          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7650.298 17416.161296        48600           1       25.425   10.374988          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7825.366 17556.581276        48600           1       25.321   10.458009          30              167
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7238.564 16983.078912        48600           1       25.671   10.115274          30              155
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      9112.44 18648.574675        48600           1       24.554   11.109234          30              194
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7757.284 17467.249754        48600           1       25.362   10.403795          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7345.55 17102.702331        48600           1       25.607   10.187176          30              157
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7455.778 17228.269553        48600           1       25.541   10.262764          30              159
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8272.762 17916.348875        48600           1       25.055   10.671269          30              177
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7789.704 17539.865991        48600           1       25.342    10.44859          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8489.976 18136.553556        48600           1       24.925   10.803767          30              181
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7737.832 17486.731324        48600           1       25.373   10.416711          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8097.694 17783.175605        48600           1       25.159   10.592531          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7925.868 17654.434163        48600           1       25.261     10.5166          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30       7588.7 17340.154545        48600           1       25.462   10.329015          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30       8561.3 18166.051668        48600           1       24.883   10.820319          30              183
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7692.444 17447.887394        48600           1         25.4   10.393652          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8434.862 18080.270674        48600           1       24.958   10.769876          30              180
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8123.63 17839.773346        48600           1       25.143   10.627443          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7442.81 17198.489158        48600           1       25.549   10.244394          30              159
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7838.334 17522.603921        48600           1       25.314   10.436158          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7779.978 17518.119026        48600           1       25.348   10.435176          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8321.392 17959.692158        48600           1       25.026   10.697164          30              178
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7559.522 17273.721311        48600           1        25.48   10.288032          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7021.35 16797.306971        48600           1         25.8   10.005498          30              150
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7151.03 16907.822608        48600           1       25.723   10.070763          30              153
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7092.674 16835.375741        48600           1       25.758   10.027035          30              152
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8382.99 17969.273048        48600           1        24.99   10.701397          30              180
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7977.74 17644.076801        48600           1       25.231   10.508456          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7455.778 17292.208946        48600           1        25.54   10.303126          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8305.182 17924.759412        48600           1       25.036   10.675613          30              178
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8421.894 18052.599223        48600           1       24.966   10.752806          30              180
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7838.334 17585.47317        48600           1       25.313   10.475831          30              167
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7459.02 17235.705087        48600           1       25.539    10.26735          30              159
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7805.914 17513.136063        48600           1       25.333   10.431209          30              167
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7293.678 17046.853731        48600           1       25.638   10.153667          30              156
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7300.162 17126.501037        48600           1       25.633    10.20374          30              155
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30       6129.8 15806.204677        48600           1       26.332    9.412639          30              132
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7332.582 17137.139322        48600           1       25.614   10.209359          30              156
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7925.868 17591.811368        48600           1       25.262   10.477087          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7919.384 17640.083973        48600           1       25.265   10.507748          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7890.206 17575.333518        48600           1       25.283   10.467804          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7170.482 16953.570548        48600           1       25.711   10.098984          30              153
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8139.84 17875.036822        48600           1       25.133   10.649193          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7955.046 17656.442462        48600           1       25.244   10.516961          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7634.088 17379.510206        48600           1       25.435    10.35238          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8233.858 17893.842711        48600           1       25.078   10.658232          30              176
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7491.44 17245.977382        48600           1        25.52    10.27276          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7371.486 17162.681045        48600           1       25.591   10.224173          30              157
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8081.484 17809.765814        48600           1       25.168   10.609796          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8810.934 18387.162698        48600           1       24.734   10.952682          30              188
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8042.58 17724.550965        48600           1       25.192   10.557231          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7352.034 17053.126784        48600           1       25.604   10.155648          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7857.786 17565.989817        48600           1       25.302   10.462925          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7786.462 17532.620599        48600           1       25.344   10.444121          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7647.056 17408.838458        48600           1       25.427   10.370471          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7296.92 17054.399175        48600           1       25.636   10.158322          30              156
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6865.734 16622.600914        48600           1       25.893    9.900684          30              147
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7413.632 17195.55822        48600           1       25.566   10.243517          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7672.992 17404.022292        48600           1       25.412   10.366593          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7997.192 17749.298331        48600           1       25.218   10.574236          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6820.346 16579.345514        48600           1        25.92    9.874999          30              146
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7741.074 17430.80558        48600           1       25.372   10.381311          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7183.45 16983.988338        48600           1       25.703   10.117746          30              153
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8266.278 17963.874607        48600           1       25.058   10.701431          30              176
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7069.98 16847.142761        48600           1       25.771   10.035266          30              151
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8395.958 18058.318035        48600           1       24.981   10.757167          30              179
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7595.184 17354.876289        48600           1       25.458   10.338096          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7494.682 17317.245194        48600           1       25.517   10.317641          30              159
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7692.444 17384.520588        48600           1       25.401   10.353656          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8094.452 17838.061446        48600           1        25.16   10.627248          30              172
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7838.334 17585.47317        48600           1       25.313   10.475831          30              167
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7462.262 17243.136805        48600           1       25.537   10.271934          30              159
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8198.196 17878.257608        48600           1       25.099   10.649469          30              175
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7909.658 17618.532298        48600           1       25.271   10.494454          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8655.318 18242.973101        48600           1       24.827   10.866143          30              185
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7540.07 17229.262729        48600           1       25.492   10.260601          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7468.746 17193.922166        48600           1       25.534   10.240647          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8982.76 18502.591342        48600           1       24.632   11.020734          30              192
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8253.31 17935.901694        48600           1       25.066   10.684177          30              176
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8554.816 18213.028547        48600           1       24.886   10.850115          30              182
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8347.328 18015.413322        48600           1        25.01   10.731538          30              178
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7857.786 17565.989817        48600           1       25.302   10.462925          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7368.244 17155.197318        48600           1       25.593   10.219557          30              157
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7919.384 17577.410052        48600           1       25.266   10.468202          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7786.462 17532.620599        48600           1       25.344   10.444121          30              166
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8123.63 17777.803425        48600           1       25.144   10.588355          30              174
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8104.178 17797.345458        48600           1       25.155   10.601272          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8318.15 18014.080448        48600           1       25.027   10.731555          30              177
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7611.394 17328.042968        48600           1       25.449    10.32063          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8668.286 18270.190541        48600           1       24.819   10.882933          30              185
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8927.646 18448.897466        48600           1       24.665   10.988393          30              191
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8292.214 17896.753551        48600           1       25.044   10.658333          30              178
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8308.424 17993.192295        48600           1       25.033   10.718671          30              177
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7446.052 17205.940005        48600           1       25.547    10.24899          30              159
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7267.742 17051.193825        48600           1       25.653   10.157293          30              155
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7105.642 16866.066522        48600           1        25.75   10.045969          30              152
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8567.784 18179.757751        48600           1       24.879   10.828775          30              183
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7582.216 17325.417864        48600           1       25.466   10.319925          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7332.582 17137.139322        48600           1       25.614   10.209359          30              156
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7760.526 17537.569259        48600           1       25.359   10.448068          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7108.884 16873.728938        48600           1       25.748   10.050696          30              152
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8331.118 17980.612214        48600           1        25.02    10.71007          30              178
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8023.128 17744.062795        48600           1       25.203   10.570137          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7326.098 17122.130923        48600           1       25.618   10.200102          30              156
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7906.416 17611.341352        48600           1       25.273   10.490018          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7251.532 17013.392052        48600           1       25.663   10.133974          30              155
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7705.412 17477.057603        48600           1       25.392   10.411644          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7283.952 17088.896602        48600           1       25.643   10.180548          30              155
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7076.464 16796.919327        48600           1       25.768   10.003308          30              152
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7744.316 17501.27452        48600           1       25.369   10.425682          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7536.828 17285.802847        48600           1       25.493   10.296405          30              161
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7796.188 17491.364878        48600           1       25.339   10.417777          30              167
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8032.854 17765.400066        48600           1       25.197   10.583298          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7666.508 17389.371167        48600           1       25.416   10.357555          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7387.696 17135.758374        48600           1       25.582   10.206629          30              158
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8143.082 17820.256607        48600           1       25.132   10.614545          30              174
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6943.542 16743.35255        48600           1       25.846    9.974181          30              148
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8366.78 18057.066909        48600           1       24.998    10.75723          30              178
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6985.688 16778.126496        48600           1       25.821    9.994647          30              149
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8739.61 18358.989721        48600           1       24.776   10.936902          30              186
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7611.394 17391.615553        48600           1       25.448   10.360758          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7990.708 17672.713846        48600           1       25.223   10.526123          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7533.586 17278.403472        48600           1       25.495    10.29184          30              161
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7948.562 17642.104629        48600           1       25.248   10.508116          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7861.028 17573.208292        48600           1         25.3   10.467378          30              168
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7886.964  17568.1213        48600           1       25.285   10.463354          30              169
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7932.352 17668.77032        48600           1       25.257   10.525443          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8156.05 17848.490853        48600           1       25.124   10.631962          30              174
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7637.33 17323.257732        48600           1       25.434   10.316765          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8152.808 17841.437364        48600           1       25.126   10.627611          30              174
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7873.996 17664.633132        48600           1       25.291   10.524653          30              167
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8866.048 18381.443557        48600           1       24.702   10.947566          30              190
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8266.278 17902.334274        48600           1       25.059   10.662623          30              177
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8039.338 17717.427371        48600           1       25.194   10.552837          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7572.49 17303.284756        48600           1       25.472   10.306271          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7553.038 17322.743216        48600           1       25.483   10.319191          30              161
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7151.03 16907.822608        48600           1       25.723   10.070763          30              153
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8418.652 18106.72644        48600           1       24.967   10.787025          30              179
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7721.622 17450.309767        48600           1       25.383   10.394244          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6188.156 15956.199193        48600           1       26.296    9.505177          30              132
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8091.21 17768.992087        48600           1       25.163   10.583782          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7523.86 17320.019001        48600           1         25.5    10.31843          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8635.866 18262.583692        48600           1       24.838   10.879051          30              184
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7922.626 17647.260825        48600           1       25.263   10.512175          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8421.894 18113.629044        48600           1       24.965   10.791282          30              179
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30       7102.4     16858.4        48600           1       25.752    10.04124          30              152
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8227.374 17879.796361        48600           1       25.082   10.649567          30              176
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7660.024 17438.107741        48600           1       25.419   10.388524          30              163
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8130.114 17853.88886        48600           1       25.139    10.63615          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     9135.134 18635.457906        48600           1       24.541   11.100375          30              195
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7384.454 17128.265952        48600           1       25.584   10.202007          30              158
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7728.106 17464.88931        48600           1       25.379   10.403238          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7530.344 17271.000317        48600           1       25.497   10.287273          30              161
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7663.266 17445.415883        48600           1       25.417   10.393032          30              163
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8622.898 18235.331842        48600           1       24.846   10.862241          30              184
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7718.38 17443.014522        48600           1       25.385   10.389744          30              165
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7543.312 17300.590283        48600           1       25.489   10.305527          30              161
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8567.784 18179.757751        48600           1       24.879   10.828775          30              183
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6846.282 16642.029164        48600           1       25.904    9.913667          30              146
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7685.96 17433.280368        48600           1       25.404   10.384642          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8003.676 17701.295062        48600           1       25.215   10.543755          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7475.23 17208.814206        48600           1        25.53   10.249834          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7611.394 17391.615553        48600           1       25.448   10.360758          30              162
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7919.384 17640.083973        48600           1       25.265   10.507748          30              169
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8726.642 18271.654007        48600           1       24.785   10.882223          30              187
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7442.81 17198.489158        48600           1       25.549   10.244394          30              159
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8100.936 17790.262238        48600           1       25.157   10.596903          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8081.484 17747.691115        48600           1       25.169    10.57064          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7507.65 17283.045443        48600           1        25.51   10.295625          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7416.874 17138.743694        48600           1       25.565   10.207535          30              159
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8065.274 17774.319625        48600           1       25.178   10.587933          30              172
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7663.266 17382.040067        48600           1       25.418   10.353032          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6862.492 16614.775238        48600           1       25.895    9.895856          30              147
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8473.766 18102.11308        48600           1       24.935   10.782522          30              181
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7867.512 17587.634563        48600           1       25.296   10.476277          30              168
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8376.506 18016.698844        48600           1       24.993   10.731493          30              179
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7955.046 17656.442462        48600           1       25.244   10.516961          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8052.306 17745.901035        48600           1       25.186   10.570402          30              172
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7478.472 17216.25448        48600           1       25.528   10.254424          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8288.972 17951.327262        48600           1       25.045   10.692847          30              177
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     6690.666 16396.852416        48600           1       25.998    9.764425          30              144
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7695.686 17455.185419        48600           1       25.398   10.398153          30              164
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7971.256 17692.225813        48600           1       25.234   10.539034          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8100.936 17790.262238        48600           1       25.157   10.596903          30              173
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8762.304  18346.1271        48600           1       24.763   10.928167          30              187
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      8010.16 17715.564818        48600           1       25.211   10.552558          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8006.918 17708.431674        48600           1       25.213   10.548158          30              171
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7964.772 17677.922948        48600           1       25.238   10.530212          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7293.678 17111.471023        48600           1       25.637   10.194471          30              155
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8120.388 17832.710515        48600           1       25.145   10.623087          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8392.716 18051.389623        48600           1       24.983   10.752893          30              179
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     8097.694 17783.175605        48600           1       25.159   10.592531          30              173
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30     7497.924 17260.815985        48600           1       25.516   10.281913          30              160
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7961.53 17670.766282        48600           1        25.24   10.525797          30              170
+ Min Reward:  Mean Reward   Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games
+         -30      7896.69 17652.377408        48600           1       25.278   10.516212          30              168
