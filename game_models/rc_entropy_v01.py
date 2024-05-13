@@ -8,6 +8,7 @@ class RC_entropy():
         max_number_scrambles: max number of scrambles that can be performed.
         number_moves_allowed: number of moves the agent can perform before truncate the game.
         """
+        print("Verision: 13/05/2024 - 13:06")
         # Initialize the cube
         self.cube = Cube()
         # The solved state
@@ -27,19 +28,22 @@ class RC_entropy():
     # 1. Methods for the main of the game
     def reset(self, seed=None):
         ''' Start the game'''
-        # Reset the cube
-        self.cube.reset()
+        # Reset the old_entropy
+        self.old_entropy = 0
         # Reset the number of moves the agent will perform before lose (truncate)
         self.number_of_move = self.number_moves_allowed
         # Scrumble the cube
         if seed: random.seed(seed)
         number_scrambles = self.get_number_moves() # Get a number of scramble
-        for _ in range(number_scrambles):
-            # 12 different possible moves
-            move = random.randint(0, 11) # generate a random integer between 0 and 11 (inclusive)
-            self.cube.step(move)
-        self.old_state = self.cube.status.flatten()
-        self.old_entropy = len([1 for x, y in zip(self.initial_state, self.old_state) if x != y])
+        while self.old_entropy == 0: # Avoid return the completed_state
+            # Reset the cube
+            self.cube.reset()
+            for _ in range(number_scrambles):
+                # 12 different possible moves
+                move = random.randint(0, 11) # generate a random integer between 0 and 11 (inclusive)
+                self.cube.step(move)
+            self.old_state = self.cube.status.flatten()
+            self.old_entropy = len([1 for x, y in zip(self.initial_state, self.old_state) if x != y])
         return  self.old_state # Return the environment
     
     def step(self, action:int):
@@ -66,7 +70,13 @@ class RC_entropy():
             return new_state, reward, terminated, truncated, completed
         elif self.old_entropy > new_entropy:
             # reward = (R for decrease the entropy) * (R for decrease the most) * (R for use less steps)
-            reward = self.number_moves_allowed * (54 - new_entropy) * (self.number_of_move + 1)
+            # Game 1:
+            #reward = self.number_moves_allowed * (54 - new_entropy) * (self.number_of_move + 1)
+            # Game 2:
+            if completed:
+                reward = self.number_moves_allowed*10
+            else:
+                reward = self.number_moves_allowed
             terminated = True
             if self.number_of_move <= 0: # When it reached the number allowed of moves
                 truncated = True
