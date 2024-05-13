@@ -31,7 +31,7 @@ class RC_entropy():
         # Reset the old_entropy
         self.old_entropy = 0
         # Reset the number of moves the agent will perform before lose (truncate)
-        self.number_of_move = self.number_moves_allowed
+        self.reset_number_moves_count()
         # Scrumble the cube
         if seed: random.seed(seed)
         number_scrambles = self.get_number_moves() # Get a number of scramble
@@ -42,8 +42,8 @@ class RC_entropy():
                 # 12 different possible moves
                 move = random.randint(0, 11) # generate a random integer between 0 and 11 (inclusive)
                 self.cube.step(move)
-            self.old_state = self.cube.status.flatten()
-            self.old_entropy = len([1 for x, y in zip(self.initial_state, self.old_state) if x != y])
+            self.define_old_state_and_entropy()
+        #print(f"\n{self.old_entropy=}\n") # Delete
         return  self.old_state # Return the environment
     
     def step(self, action:int):
@@ -82,6 +82,7 @@ class RC_entropy():
                 truncated = True
             else:
                 truncated = False
+            #print(f"\n{new_entropy=}\n")
             return new_state, reward, terminated, truncated, completed
 
     # 2. Methods for the the rest of the game
@@ -91,12 +92,32 @@ class RC_entropy():
         probabilities = [x/sum(scenarios_per_level) for x in scenarios_per_level] # Probability of each level
         got_number_scrambles = np.random.choice(a=len(probabilities), p=probabilities)
         return got_number_scrambles+1 # Select a number of moves = level
+    
+    def return_prior_state(self, performed_actions):
+        for action in performed_actions:
+            if action % 2 == 0:
+                self.cube.step(action+1)
+            else:
+                self.cube.step(action-1)
+
+    def reset_number_moves_count(self):
+        self.number_of_move = self.number_moves_allowed
+
+    def define_old_state_and_entropy(self):
+        self.old_state = self.cube.status.flatten()
+        self.old_entropy = len([1 for x, y in zip(self.initial_state, self.old_state) if x != y])
+
+    def get_old_entropy(self):
+        return self.old_entropy
 
 if __name__ == '__main__':
-    env = RC_entropy(max_number_scrambles=1, number_moves_allowed=30)
+    env = RC_entropy(max_number_scrambles=10, number_moves_allowed=30)
     state = env.reset()
-    print(state)
-    state = env.reset()
-    print(state)
-    state = env.reset()
-    print(state)
+    print(env.cube.status.flatten())
+    movements = [7, 0, 9, 10, 4, 11]
+    for step in movements:
+        env.cube.step(step)
+    print(env.cube.status.flatten())
+    print(movements[::-1])
+    env.return_prior_state(movements[::-1])
+    print(env.cube.status.flatten())
