@@ -71,12 +71,12 @@ class RC_entropy():
         elif self.old_entropy > new_entropy:
             # reward = (R for decrease the entropy) * (R for decrease the most) * (R for use less steps)
             # Game 1:
-            #reward = self.number_moves_allowed * (54 - new_entropy) * (self.number_of_move + 1)
+            reward = self.number_moves_allowed * (54 - new_entropy) * (self.number_of_move + 1)
             # Game 2:
-            if completed:
-                reward = self.number_moves_allowed*10
-            else:
-                reward = self.number_moves_allowed
+            #if completed:
+            #    reward = self.number_moves_allowed*10
+            #else:
+            #    reward = self.number_moves_allowed
             terminated = True
             if self.number_of_move <= 0: # When it reached the number allowed of moves
                 truncated = True
