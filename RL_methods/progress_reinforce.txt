@@ -1,1 +1,1329 @@
 1. max_number_scrambles=1
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30      -25.118   39.570318          300           1       29.633    3.091975          30               15                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30      -29.674   10.303869          296           5       29.975    0.790174          30                1                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30      -29.674   10.303869          296           5       29.975    0.790174          30                1                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  12
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30      -29.952    1.517134           18          13       29.983    0.537318          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
+ Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games  Last entropy level
+         -30        -30.0         0.0          -30          30         30.0         0.0          30                0                  10
