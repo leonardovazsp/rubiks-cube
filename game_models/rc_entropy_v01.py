@@ -8,7 +8,7 @@ class RC_entropy():
         max_number_scrambles: max number of scrambles that can be performed.
         number_moves_allowed: number of moves the agent can perform before truncate the game.
         """
-        print("Verision: 13/05/2024 - 13:06")
+        print("Version: 13/05/2024 - 13:06")
         # Initialize the cube
         self.cube = Cube()
         # The solved state
@@ -38,13 +38,17 @@ class RC_entropy():
         while self.old_entropy == 0: # Avoid return the completed_state
             # Reset the cube
             self.cube.reset()
+            # Reset the best_actions
+            self.best_moves = []
             for _ in range(number_scrambles):
                 # 12 different possible moves
                 move = random.randint(0, 11) # generate a random integer between 0 and 11 (inclusive)
                 self.cube.step(move)
+                self.best_moves.append(move)
             self.define_old_state_and_entropy()
+        self.do_anti_actions_list(self.best_moves)
         #print(f"\n{self.old_entropy=}\n") # Delete
-        return  self.old_state # Return the environment
+        return  self.old_state, self.anti_action_list[::-1] # Return the environment
     
     def step(self, action:int):
         """ 
@@ -71,12 +75,12 @@ class RC_entropy():
         elif self.old_entropy > new_entropy:
             # reward = (R for decrease the entropy) * (R for decrease the most) * (R for use less steps)
             # Game 1:
-            reward = self.number_moves_allowed * (54 - new_entropy) * (self.number_of_move + 1)
+            #reward = self.number_moves_allowed * (54 - new_entropy) * (self.number_of_move + 1)
             # Game 2:
-            #if completed:
-            #    reward = self.number_moves_allowed*10
-            #else:
-            #    reward = self.number_moves_allowed
+            if completed:
+                reward = self.number_moves_allowed*10
+            else:
+                reward = self.number_moves_allowed
             terminated = True
             if self.number_of_move <= 0: # When it reached the number allowed of moves
                 truncated = True
@@ -100,6 +104,14 @@ class RC_entropy():
             else:
                 self.cube.step(action-1)
 
+    def do_anti_actions_list(self, actions_list):
+        self.anti_action_list = []
+        for action in actions_list:
+            if action % 2 == 0:
+                self.anti_action_list.append(action+1)
+            else:
+                self.anti_action_list.append(action-1)
+
     def reset_number_moves_count(self):
         self.number_of_move = self.number_moves_allowed
 
@@ -112,12 +124,5 @@ class RC_entropy():
 
 if __name__ == '__main__':
     env = RC_entropy(max_number_scrambles=10, number_moves_allowed=30)
-    state = env.reset()
-    print(env.cube.status.flatten())
-    movements = [7, 0, 9, 10, 4, 11]
-    for step in movements:
-        env.cube.step(step)
-    print(env.cube.status.flatten())
-    print(movements[::-1])
-    env.return_prior_state(movements[::-1])
-    print(env.cube.status.flatten())
+    state, best_moves = env.reset()
+    print(best_moves)
