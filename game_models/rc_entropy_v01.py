@@ -80,7 +80,9 @@ class RC_entropy():
             if completed:
                 reward = self.number_moves_allowed*10
             else:
-                reward = self.number_moves_allowed
+                #reward = self.number_moves_allowed
+                #reward = +1 #a coockie so it gets happy to decrease the system entropy
+                reward = 0 #a coockie so it gets happy to decrease the system entropy
             terminated = True
             if self.number_of_move <= 0: # When it reached the number allowed of moves
                 truncated = True
