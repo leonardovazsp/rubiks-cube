@@ -8,7 +8,7 @@ class RC_entropy():
         max_number_scrambles: max number of scrambles that can be performed.
         number_moves_allowed: number of moves the agent can perform before truncate the game.
         """
-        print("Version: 13/05/2024 - 13:06")
+        print("Version: 17/05/2024 - 11:21")
         # Initialize the cube
         self.cube = Cube()
         # The solved state
