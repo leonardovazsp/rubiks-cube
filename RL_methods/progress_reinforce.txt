@@ -1164,3 +1164,4 @@
           -4      987.186   44.870095         1000          16       29.819    3.289413         100              998 0.999418            2          None          None
  Min Reward:  Mean Reward  Std Reward  Max Reward:  Min length  Mean length  Std length  Max length  Completed_games     rate  Model alone Best scramble % Performance
          973       989.07    7.282932         1000          16       29.701    0.935734          30             1000 0.999417            0          None          None
+
