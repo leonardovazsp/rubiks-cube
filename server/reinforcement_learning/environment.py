@@ -22,7 +22,7 @@ class Cube():
         self.moves = [self.right, self.right_rev, self.left, self.left_rev, self.top, self.top_rev, self.bottom, self.bottom_rev, self.front, self.front_rev, self.back, self.back_rev]
         self.last_move = None
         self.double_move = False
-        self.reward = 0.1
+        self.reward = 100.
 
     def __repr__(self):
         return str(self.state)
@@ -243,5 +243,15 @@ class Cube():
 
 if __name__ == '__main__':
     cube = Cube()
-    # cube.right()
-    # print(cube)
+    # cube.scramble(1)
+    # cube.step(1)
+    state = copy.deepcopy(cube.state)
+    action = cube.get_random_step()
+    reward, state_ = cube.step(action)
+    state_ = copy.deepcopy(state_)
+    dones = int(cube.is_solved())
+
+    print(state)
+    print(state_)
+    print(reward)
+    print(dones)
